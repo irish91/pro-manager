@@ -1,0 +1,7 @@
+parameters:
+#    pmf_static.example.class: Pmf\StaticBundle\Example
+
+services:
+#    pmf_static.example:
+#        class: %pmf_static.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
