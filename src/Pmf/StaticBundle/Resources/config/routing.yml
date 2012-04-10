@@ -1,0 +1,3 @@
+PmfStaticBundle_homepage:
+    pattern:  /
+    defaults: { _controller: PmfStaticBundle:Default:index }
