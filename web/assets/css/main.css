@@ -5,6 +5,7 @@ body{
 	background-repeat:no-repeat;
 	background-position:center top;
 	background-color:#282828;
+	background-attachment:fixed;
 }
 
 #global-container{
@@ -226,15 +227,17 @@ body{
 */
 #container{
 	margin:0 auto 0 auto;
-	min-height:456px; /* 100px more than background image. (356px) */
+	height:456px; /* 100px more than background image. (356px) */
+	font-family:"Times New Roman";
+	position:relative;
 	background-image:url(../images/main-frame.png);
 	background-repeat:no-repeat;
 	background-position:center bottom;
-	font-family:"Times New Roman";
-	position:relative;
+	margin-bottom:0;
 }
 
 #logo{
+	position:absolute;
 	padding-top:1em;
 	background-image:url(../images/logo.png);
 	background-repeat:no-repeat;
@@ -243,21 +246,28 @@ body{
 	width:522px;
 	height:200px;
 	
+	top:40px;
+	
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
 }
 
 #content{
+	position:absolute;
+	width:350px;
+	height:165px;
+	overflow:auto;
 	margin-top:5px;
-	width:320px;
 	background-color:#000;
 	color:#FFF;
-	font-size:12px;
+	font-size:11px;
 	position:relative;
-	left:100px;
 	text-align:center;
 	padding:3px;
+	
+	top:265px;
+	left:40px;
 	
 	-moz-opacity:.65; filter:alpha(opacity=65); opacity:.65;
 	
@@ -271,19 +281,67 @@ body{
 	font-size:12px;
 }
 
+
 /*---------------------------------------------
-	 Characters Images
+	 Statistics
+  ---------------------------------------------
+*/
+#statistics{
+	margin-top:0;
+	width:99%;
+	min-height:38px;
+	background-image:url(../images/bar-stats.png);
+	background-repeat:no-repeat;
+	position:relative;
+	top:-10px;
+}
+
+#statistics p{
+	margin:0;
+	padding:0;
+	padding-left:3.5em;
+	padding-top:5px;
+}
+
+#statistics a{
+	text-decoration:none;
+	font-size:13px;
+}
+
+#statistics a:hover{
+	text-decoration:underline;
+}
+
+/*---------------------------------------------
+	 Absolute Images
   ---------------------------------------------
 */
 img#char-managers{
 	position:absolute;
 	left:-210px;
+	bottom:-150px;
+	z-index:1;
 }
 
 img#char-players{
 	position:absolute;
 	right:-50px;
 	top:100px;
+}
+
+img#ball-shoes-field{
+	position:absolute;
+	bottom:3px;
+	left:-50px;
+	z-index:0;
+}
+
+/*---------------------------------------------
+	 Footer
+  ---------------------------------------------
+*/
+#footer{
+	height:800px;
 }
 
 /*---------------------------------------------
@@ -295,3 +353,13 @@ input[type=text], input[type=password]{
 }
 
 input:focus { outline:none; }
+
+a{
+	color:#FFF;
+	text-decoration:underline;
+}
+
+a:hover{
+	color:#CCC;
+	text-decoration:none;
+}
