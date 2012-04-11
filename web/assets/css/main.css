@@ -2,5 +2,6 @@ body{
 	
 	background-image:url(../images/background.png);
 	background-repeat:no-repeat;
-	backround-position:fixed;
+	background-position:center;
+	background-color:#161616;
 }
