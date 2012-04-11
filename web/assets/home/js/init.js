@@ -41,13 +41,13 @@ $(document).ready(function(){
 	 * - expand on hover / shrink
 	 */
 	// mouse in / mouse out
-	$("#statistics").hover(
+	$("#container").hover(
 	function () {
 		
 		// display content
-		$('.content', this).css('display', 'block');
+		$('#statistics .content').css('display', 'block');
 		
-		$('.content', this).animate({
+		$('#statistics .content').animate({
 		    height: '120px',
 		    opacity: 0.65,
 		    
@@ -58,14 +58,14 @@ $(document).ready(function(){
 	}, 
 	function () {
 		
-		$('.content', this).animate({
+		$('#statistics .content').animate({
 			height: '0px',
 			opacity: 0,
 		}, 500, function() {
 		    // animation complete.
 			
 			// hide content
-			$(this).css('display', 'none');
+			$('#statistics .content').css('display', 'none');
 		});	 
 		
 	});

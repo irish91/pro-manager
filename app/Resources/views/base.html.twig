@@ -6,7 +6,7 @@
 
         {#
         	----------------------------------
-        	note: we might want to use assetic later.....
+        	note: we might want to use assetic later...
         	----------------------------------
 			{% stylesheets
 			    'bundles/pmfstatic/css/home/*' filter='cssrewrite' output='css/*.css'
@@ -36,73 +36,73 @@
         
         <div id="global-container">
         	
-        		<div id="header">
+        	<div id="header">
         		
-			        <div class="auth-overall">
-			        	
-			        	<div class="auth-top">
-			        	
-			        		<div class="social">
-			        			
-			        		</div>
-			        		
-			        		<div class="login">
-			        			<span class="pseudo">Pseudo:</span>
-			        			<span class="password">Mdp:</span>
-			        			
-			        			<div class="auth">
-			        				
-			        				<p class="form-logged">
-			        					<form>
-			        						<input class="username" type="text" name="username" id="username" size="10" />
-			        						<input class="password" type="password" name="password" id="password" size="10" />
-			        						
-			        						<input class="submit" type="submit" name="sign-in" value="" /> 
-			        					</form>
-			        				</p>
-			        				
-			        			</div>
-			        			
-			        		</div>
-			        		
-			        		<div class="register">
-			        			<p>Vous n'avez pas encore de compte?</p>
-			        			
-			        			<p><button>Je m'inscris</button></p>
-			        		</div>
-			        		
-			        	</div>
-			        	
-			        	<div class="auth-bottom">
-			        		
-			        		<div class="links">
-			        			<p><a href="#">Connexion</a> |<a href="#">Inscription</a></p>
-			        		</div>
-			        		
-			        	</div>
-			        	
-			        </div>
-		        
-		        </div>
-		        
-		        <div id="container">
+		        <div class="auth-overall">
 		        	
-		        <img id="char-managers" src="{{ asset('assets/home/images/characters-managers.png') }}" alt="Managers" />
-	        	<img id="char-players" src="{{ asset('assets/home/images/characters-players.png') }}" alt="Players" />
-	        	<img id="ball-shoes-field" src="{{ asset('assets/home/images/ball-shoes-field.png') }}" alt="Ball, shoes and field" />
-	        	
-	        	<div id="logo"></div>
-	        	
-	        	<div id="content">
-	        		{% block content %}
-	        		{% endblock %}
-	        	</div>
-	        	
-	        </div>
+		        	<div class="auth-top">
+		        	
+		        		<div class="social">
+		        			
+		        		</div>
+		        		
+		        		<div class="login">
+		        			<span class="pseudo">Pseudo:</span>
+		        			<span class="password">Mdp:</span>
+		        			
+		        			<div class="auth">
+		        				
+		        				<p class="form-logged">
+		        					<form>
+		        						<input class="username" type="text" name="username" id="username" size="10" />
+		        						<input class="password" type="password" name="password" id="password" size="10" />
+		        						
+		        						<input class="submit" type="submit" name="sign-in" value="" /> 
+		        					</form>
+		        				</p>
+		        				
+		        			</div>
+		        			
+		        		</div>
+		        		
+		        		<div class="register">
+		        			<p>Vous n'avez pas encore de compte?</p>
+		        			
+		        			<p><button>Je m'inscris</button></p>
+		        		</div>
+		        		
+		        	</div>
+		        	
+		        	<div class="auth-bottom">
+		        		
+		        		<div class="links">
+		        			<p><a href="#">Connexion</a> |<a href="#">Inscription</a></p>
+		        		</div>
+		        		
+		    	</div>
+		        	
+			</div>
 	        
-	        
-	        <!-- load images -->
-	        <img class="load" src="{{ asset('assets/home/images/frame-stats.png') }}" alt="frame-stats" />
+	    </div>
+		        
+    <div id="container">
+        	
+        <img id="char-managers" src="{{ asset('assets/home/images/characters-managers.png') }}" alt="Managers" />
+        	<img id="char-players" src="{{ asset('assets/home/images/characters-players.png') }}" alt="Players" />
+        	<img id="ball-shoes-field" src="{{ asset('assets/home/images/ball-shoes-field.png') }}" alt="Ball, shoes and field" />
+        	
+        	<div id="logo"></div>
+        	
+        	<div id="content">
+        		{% block content %}
+        		{% endblock %}
+        	</div>
+        	
+        </div>
+        
+        
+        <!-- load images -->
+        <img class="load" src="{{ asset('assets/home/images/frame-stats.png') }}" alt="frame-stats" />
 	        <div id="statistics">
 		        <div class="content">
 		        
