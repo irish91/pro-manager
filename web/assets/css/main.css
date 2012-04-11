@@ -1,10 +1,13 @@
 body{
-	
+	margin:0;
+	padding:0;
 	background-color:#282828;
 	overflow: hidden;
 }
 
 #global-container{
+	margin:0;
+	padding:0;
 	position:relative;
 	margin:0 auto 0 auto;
 	width:1580px;
@@ -16,5 +19,6 @@ body{
 	-webkit-box-shadow: 0px 0px 14px 2px #000000;
 	-moz-box-shadow: 0px 0px 14px 2px #000000;
 	box-shadow: 0px 0px 14px 2px #000000;
-	overflow: hidden; 
+	overflow: hidden;
+	
 }
