@@ -411,12 +411,37 @@ img#ball-shoes-field{
   ---------------------------------------------
 */
 #footer{
+	position:relative;
 	margin:0 auto 0 auto;
 	width:900px;
-	height:230px;
-	background-image:url(../images/bg-footer.png);
-	background-repeat:no-repeat;
+	min-height:230px;
+	margin-bottom:1em;
 }
+	
+	#footer .container{
+		width:inherit;
+		min-height:inherit;
+		background-image:url(../images/bg-footer.png);
+		background-repeat:no-repeat;
+	}
+
+	#footer .inner{
+		margin:0 auto 0 auto;
+		width:536px;
+		height:206px;
+		background-image:url(../images/bg-inner-footer.png);
+		background-repeat:no-repeat;
+		float:left;
+		position:absolute;
+		left:3em;
+		top:1.5em;
+	}
+	
+	#footer .legal{
+		text-align:center;
+		font-size:13px;
+		color:#EFEFEF;
+	}
 
 /*---------------------------------------------
 	 Global Tags
