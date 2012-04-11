@@ -1,0 +1,4 @@
+[10-Apr-2012 23:24:11 UTC] PHP Fatal error:  Class 'Doctrine\Common\Annotations\AnnotationRegistry' not found in /home/elcyone/public_html/web/totalfootball/site/app/autoload.php on line 35
+[10-Apr-2012 23:36:57 UTC] PHP Fatal error:  Class 'Doctrine\DBAL\Configuration' not found in /home/elcyone/public_html/web/totalfootball/site/vendor/doctrine/lib/Doctrine/ORM/Configuration.php on line 42
+[10-Apr-2012 23:50:13 UTC] PHP Fatal error:  Class 'Doctrine\DBAL\Configuration' not found in /home/elcyone/public_html/web/totalfootball/site/vendor/doctrine/lib/Doctrine/ORM/Configuration.php on line 42
+[11-Apr-2012 00:06:02 UTC] PHP Fatal error:  Class 'Doctrine\DBAL\Configuration' not found in /home/elcyone/public_html/web/totalfootball/site/vendor/doctrine/lib/Doctrine/ORM/Configuration.php on line 42
