@@ -316,7 +316,25 @@ body{
 		color:#181818;
 		font-weight:bold;
 	}
-
+	
+	#statistics-content .stats{
+		position:relative;
+		top:1em;
+		left:1em;
+	}
+	
+	#statistics-content .stats p{
+		margin:0;
+		padding:0;
+		color:#dbcf0d;
+	}
+	
+	#statistics-content .stats p span{
+		color:#FFF;
+		font-size:12px;
+		padding-right:0.5em;
+	}
+	
 #statistics-bar{
 	margin-top:0;
 	width:99%;
