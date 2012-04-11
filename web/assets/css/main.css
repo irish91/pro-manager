@@ -291,11 +291,31 @@ body{
 	position:relative;
 	width:99%;
 	top:-10px;
-	min-height:100px;
+	min-height:120px;
 	background-color:#232323;
 	
 	-moz-opacity:.65; filter:alpha(opacity=65); opacity:.65;
 }
+
+	#statistics-content .frame{
+		float:left;
+		width:150px;
+		height:88px;
+		margin-right:1em;
+		margin-left:1em;
+		margin-top:1em;
+		background-image:url(../images/frame-stats.png);
+		background-repeat:no-repeat;
+	}
+	
+	#statistics-content .frame span.type{
+		position:relative;
+		top:8px;
+		left:15px;
+		font-size:14px;
+		color:#181818;
+		font-weight:bold;
+	}
 
 #statistics-bar{
 	margin-top:0;
@@ -352,7 +372,7 @@ img#ball-shoes-field{
   ---------------------------------------------
 */
 #footer{
-	height:800px;
+	height:300px;/* temporary */
 }
 
 /*---------------------------------------------
