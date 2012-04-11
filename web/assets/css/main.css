@@ -92,9 +92,15 @@ body{
 		top:8px;
 	}
 	
-	#header .auth-top .login p.form-logged{
+	#header .auth-top .login .auth{
 		margin:0;
-		padding-top:35px;
+		position:absolute;
+		top:20px;
+	}
+	
+	/* hack firefox */
+	#header .auth-top .login .auth, x:-moz-any-link{
+		top:10px;
 	}
 	
 	#header .auth-top .login form input[type=text], #header .auth-top .login form input[type=password]{
@@ -144,6 +150,11 @@ body{
 		top:-16px;
 		left:70px;
 		cursor:pointer;
+	}
+	
+	/* hack firefox */
+	#header .auth-top .login form input.submit, x:-moz-any-link{
+		top:0;
 	}
 	
 
