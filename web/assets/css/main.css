@@ -211,8 +211,71 @@ body{
 }
 
 #header .auth-bottom .links p a{
-	font-size:11px;
+	margin:0;
+	padding:0;
+	font-size:10px;
 	color:#FFF;
-	padding-left:6px;
+	padding-left:9px;
 	text-decoration:none;
 }
+
+
+/*---------------------------------------------
+	 Container
+  ---------------------------------------------
+*/
+#container{
+	margin:0 auto 0 auto;
+	min-height:456px; /* 100px more than background image. (356px) */
+	background-image:url(../images/main-frame.png);
+	background-repeat:no-repeat;
+	background-position:center bottom;
+	font-family:"Times New Roman";
+}
+
+#logo{
+	padding-top:1em;
+	background-image:url(../images/logo.png);
+	background-repeat:no-repeat;
+	background-position:right center;
+	background-color:#000;
+	width:522px;
+	height:200px;
+	
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#content{
+	margin-top:5px;
+	width:320px;
+	background-color:#000;
+	color:#FFF;
+	font-size:12px;
+	position:relative;
+	left:100px;
+	text-align:center;
+	padding:3px;
+	
+	-moz-opacity:.65; filter:alpha(opacity=65); opacity:.65;
+	
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    
+}
+
+#content h1, #content h2{
+	font-size:12px;
+}
+
+/*---------------------------------------------
+	 Global Tags
+  ---------------------------------------------
+*/
+input[type=text], input[type=password]{
+	padding:3px;	
+}
+
+input:focus { outline:none; }
