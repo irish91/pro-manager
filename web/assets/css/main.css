@@ -8,11 +8,16 @@ body{
 }
 
 #global-container{
-	width:1024px;
+	width:780px;
 	min-height:500px;
 	margin: 0 auto 0 auto;
-	
-	background-color:red;
+	border:3px solid red;
+}
+
+#auth-overall{
+	width:780px;
+	height:71px;
+	background-image:url(../images/login-on.png);
 }
 
 
