@@ -231,6 +231,7 @@ body{
 	background-repeat:no-repeat;
 	background-position:center bottom;
 	font-family:"Times New Roman";
+	position:relative;
 }
 
 #logo{
@@ -268,6 +269,21 @@ body{
 
 #content h1, #content h2{
 	font-size:12px;
+}
+
+/*---------------------------------------------
+	 Characters Images
+  ---------------------------------------------
+*/
+img#char-managers{
+	position:absolute;
+	left:-210px;
+}
+
+img#char-players{
+	position:absolute;
+	right:-50px;
+	top:100px;
 }
 
 /*---------------------------------------------
