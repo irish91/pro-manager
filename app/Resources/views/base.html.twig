@@ -4,11 +4,20 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
 
-		{% stylesheets
-		    'bundles/pmfstatic/css/home/*' filter='cssrewrite' output='css/*.css'
-		%}
-			<link rel="stylesheet" href="{{ asset_url }}" />
-		{% endstylesheets %}
+        {#
+        	----------------------------------
+        	note: we might want to use assetic later.....
+        	----------------------------------
+			{% stylesheets
+			    'bundles/pmfstatic/css/home/*' filter='cssrewrite' output='css/*.css'
+			%}
+				<link rel="stylesheet" href="{{ asset_url }}" />
+			{% endstylesheets %}
+		#}
+        
+        {% block stylesheets %}
+				<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('assets/css/main.css') }}" />	
+		{% endblock %}
         
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
         
