@@ -302,17 +302,22 @@ body{
   ---------------------------------------------
 */
 
-#statistics-content{
+#statistics .content{
 	position:relative;
 	width:99%;
 	top:-10px;
-	min-height:120px;
+	
+	 /* expends to 120px on hover */
+	height:0px;
+	
 	background-color:#232323;
 	
-	-moz-opacity:.65; filter:alpha(opacity=65); opacity:.65;
+	-moz-opacity:0; filter:alpha(opacity=0); opacity:0;
+	display:none;
+	z-index:-1000;
 }
 
-	#statistics-content .frame{
+	#statistics .content .frame{
 		float:left;
 		width:150px;
 		height:88px;
@@ -323,7 +328,7 @@ body{
 		background-repeat:no-repeat;
 	}
 	
-	#statistics-content .frame span.type{
+	#statistics .content .frame span.type{
 		position:relative;
 		top:8px;
 		left:15px;
@@ -332,25 +337,25 @@ body{
 		font-weight:bold;
 	}
 	
-	#statistics-content .stats{
+	#statistics .content .stats{
 		float:right;
 		width:220px;
 		margin-top:20px;
 	}
 	
-	#statistics-content .stats p{
+	#statistics .content .stats p{
 		margin:0;
 		padding:0;
 		color:#dbcf0d;
 	}
 	
-	#statistics-content .stats p span{
+	#statistics .content .stats p span{
 		color:#FFF;
 		font-size:12px;
 		padding-right:0.5em;
 	}
 	
-#statistics-bar{
+#statistics .bar{
 	margin-top:0;
 	width:99%;
 	min-height:38px;
@@ -358,23 +363,24 @@ body{
 	background-repeat:no-repeat;
 	position:relative;
 	top:-13px;
+	z-index:1000;
 }
 
-#statistics-bar p{
-	margin:0;
-	padding:0;
-	padding-left:3.5em;
-	padding-top:5px;
-}
-
-#statistics-bar a{
-	text-decoration:none;
-	font-size:13px;
-}
-
-#statistics-bar a:hover{
-	text-decoration:underline;
-}
+	#statistics .bar p{
+		margin:0;
+		padding:0;
+		padding-left:3.5em;
+		padding-top:6px;
+	}
+	
+	#statistics .bar a{
+		text-decoration:none;
+		font-size:13px;
+	}
+	
+	#statistics .bar a:hover{
+		text-decoration:underline;
+	}
 
 /*---------------------------------------------
 	 Absolute Images

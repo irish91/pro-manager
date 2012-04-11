@@ -9,7 +9,7 @@ $(document).ready(function(){
 	 * Animate header -
 	 * -----------------
 	 *  
-	 * - slides down on hover
+	 * - slides down on hover / slides up
 	 */
 	var headerTop = $("#header").css('top');;
 	
@@ -34,5 +34,40 @@ $(document).ready(function(){
 		
 	});
 	
+	/*
+	 * Animate statistic content -
+	 * -----------------
+	 *  
+	 * - expand on hover / shrink
+	 */
+	// mouse in / mouse out
+	$("#statistics").hover(
+	function () {
+		
+		// display content
+		$('.content', this).css('display', 'block');
+		
+		$('.content', this).animate({
+		    height: '120px',
+		    opacity: 0.65,
+		    
+		}, 500, function() {
+		    // animation complete.
+		});
+			   
+	}, 
+	function () {
+		
+		$('.content', this).animate({
+			height: '0px',
+			opacity: 0,
+		}, 500, function() {
+		    // animation complete.
+			
+			// hide content
+			$(this).css('display', 'none');
+		});	 
+		
+	});
 	
 });
