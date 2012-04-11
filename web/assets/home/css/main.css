@@ -24,10 +24,14 @@ body{
 	font-family:"Verdanna";
 	color:#EFEFEF;
 	font-size:14px;
+	position:relative;
+	
+	/* top part header hidden by default - slides */
+	top:-87px;
+	height:117px;
 }
 
 	#header .auth-overall{
-		height:117px;
 	}
 	
 	#header .auth-top{
