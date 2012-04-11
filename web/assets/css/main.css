@@ -318,9 +318,9 @@ body{
 	}
 	
 	#statistics-content .stats{
-		position:relative;
-		top:1em;
-		left:1em;
+		float:right;
+		width:220px;
+		margin-top:20px;
 	}
 	
 	#statistics-content .stats p{
