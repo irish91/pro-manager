@@ -4,45 +4,90 @@
  */
 // on document ready
 $(document).ready(function(){
-	
-	/*
-	 * Animate header -
+
+	/**
+	 * Event: header - hover
 	 * -----------------
 	 *  
 	 * - slides down on hover / slides up
 	 */
-	var headerTop = $("#header").css('top');;
+	var headerTop = $("#header").css('top');
 	
 	// mouse in / mouse out
 	$("#header").hover(
 	function () {
 		
-		$(this).animate({
-		    top: '0px',
-		}, 500, function() {
-		    // animation complete.
-		});
-			   
+		// show
+		animHeader(true, headerTop);
 	}, 
 	function () {
 		
-		$(this).animate({
-		    top: headerTop,
-		}, 500, function() {
-		    // animation complete.
-		});	 
-		
+		// hide
+		animHeader(false, headerTop);
 	});
 	
-	/*
-	 * Animate statistic content -
+	/**
+	 * Event: main container - hover
 	 * -----------------
 	 *  
-	 * - expand on hover / shrink
+	 * - expand stats container on hover / shrink
 	 */
 	// mouse in / mouse out
 	$("#container").hover(
 	function () {
+		
+		// show
+		animStatistics(true);
+	}, 
+	function () {
+		
+		//hide 
+		animStatistics(false);
+	});
+		
+});
+//---------------------------
+//  END ON DOCUMENT READY
+//---------------------------
+
+
+
+/**
+ * Function animate header
+ * 
+ * @var  bool  show  whether display or hide the container 
+ */
+var animHeader = function(show, headerTop){
+	
+	if(show === true){
+		
+		$("#header").animate({
+		    top: '0px',
+		}, 500, function() {
+		    // animation complete.
+		});
+		
+	}
+	else
+	{
+		$("#header").animate({
+		    top: headerTop,
+		}, 500, function() {
+		    // animation complete.
+		});	
+	}
+};
+
+
+
+/**
+ * Function animate statistics container 
+ * 
+ * @var  bool  show  whether display or hide the container 
+ */
+var animStatistics = function(show){
+	
+	if(show === true){
 		
 		// display content
 		$('#statistics .content').css('display', 'block');
@@ -53,11 +98,11 @@ $(document).ready(function(){
 		    
 		}, 500, function() {
 		    // animation complete.
-		});
-			   
-	}, 
-	function () {
+		}); 
 		
+	}
+	else
+	{
 		$('#statistics .content').animate({
 			height: '0px',
 			opacity: 0,
@@ -66,8 +111,6 @@ $(document).ready(function(){
 			
 			// hide content
 			$('#statistics .content').css('display', 'none');
-		});	 
-		
-	});
-	
-});
+		});	
+	}
+};

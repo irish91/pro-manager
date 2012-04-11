@@ -223,7 +223,7 @@ body{
 	margin:0;
 	padding:0;
 	color:#FFF;
-	padding-top:3px;
+	padding-top:4px;
 }
 
 #header .auth-bottom .links p a{
@@ -272,7 +272,7 @@ body{
 	position:absolute;
 	width:350px;
 	height:165px;
-	overflow:auto;
+	/* overflow:auto; */
 	margin-top:5px;
 	background-color:#000;
 	color:#FFF;
