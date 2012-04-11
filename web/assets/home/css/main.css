@@ -437,3 +437,7 @@ a:hover{
 	color:#CCC;
 	text-decoration:none;
 }
+
+img.load{
+	display:none;
+}
