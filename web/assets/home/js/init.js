@@ -27,13 +27,13 @@ $(document).ready(function(){
 	});
 	
 	/**
-	 * Event: main container - hover
+	 * Event: global container - hover
 	 * -----------------
 	 *  
 	 * - expand stats container on hover / shrink
 	 */
 	// mouse in / mouse out
-	$("#container").hover(
+	$("#global-container").hover(
 	function () {
 		
 		// show
