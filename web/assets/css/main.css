@@ -286,29 +286,40 @@ body{
 	 Statistics
   ---------------------------------------------
 */
-#statistics{
+
+#statistics-content{
+	position:relative;
+	width:99%;
+	top:-10px;
+	min-height:100px;
+	background-color:#232323;
+	
+	-moz-opacity:.65; filter:alpha(opacity=65); opacity:.65;
+}
+
+#statistics-bar{
 	margin-top:0;
 	width:99%;
 	min-height:38px;
 	background-image:url(../images/bar-stats.png);
 	background-repeat:no-repeat;
 	position:relative;
-	top:-10px;
+	top:-13px;
 }
 
-#statistics p{
+#statistics-bar p{
 	margin:0;
 	padding:0;
 	padding-left:3.5em;
 	padding-top:5px;
 }
 
-#statistics a{
+#statistics-bar a{
 	text-decoration:none;
 	font-size:13px;
 }
 
-#statistics a:hover{
+#statistics-bar a:hover{
 	text-decoration:underline;
 }
 
