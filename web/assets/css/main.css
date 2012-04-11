@@ -96,7 +96,7 @@ body{
 		padding-top:35px;
 	}
 	
-	#header .auth-top .login form input[type=text]{
+	#header .auth-top .login form input[type=text], #header .auth-top .login form input[type=password]{
 		border:0;
 		color:#efefef;
 	
@@ -129,7 +129,7 @@ body{
 	#header .auth-top .login form input.password{
 		position:relative;
 		left:45px;
-		background-color:black;
+		background-color:#00000;
 	}
 	
 	#header .auth-top .login form input.submit{
@@ -145,11 +145,6 @@ body{
 		cursor:pointer;
 	}
 	
-	#header .auth-top .login form input.submit:hover{
-		top:-15px;
-		left:10px;
-		padding-top:1px;
-	}
 
 #header .auth-top .register{
 	height:65px;
