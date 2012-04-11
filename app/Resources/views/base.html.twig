@@ -3,13 +3,23 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+
+        {% block stylesheets %}
+				<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('assets/css/main.css') }}" />	
+		{% endblock %}
+        
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+
+        <style 
         
     </head>
     <body>
         {% block body %}
      
+        
+        
+        
+        
         
         {% endblock %}
       

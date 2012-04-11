@@ -1,3 +1,13 @@
-PmfStaticBundle_homepage:
-    pattern:  /
-    defaults: { _controller: PmfStaticBundle:Default:index }
+
+
+
+
+
+
+
+
+
+# must be last
+static:
+    pattern:  /{page}
+    defaults: { _controller: PmfStaticBundle:Server:index, page: 'home' }
