@@ -390,7 +390,11 @@ img#ball-shoes-field{
   ---------------------------------------------
 */
 #footer{
-	height:300px;/* temporary */
+	margin:0 auto 0 auto;
+	width:900px;
+	height:230px;
+	background-image:url(../images/bg-footer.png);
+	background-repeat:no-repeat;
 }
 
 /*---------------------------------------------
