@@ -86,13 +86,13 @@ body{
 	
 	#header .auth-top .login span.pseudo{
 		position:absolute;
-		left:48px;
+		left:50px;
 		top:8px;
 	}
 	
 	#header .auth-top .login span.password{
 		position:absolute;
-		left:140px;
+		left:130px;
 		top:8px;
 	}
 	
