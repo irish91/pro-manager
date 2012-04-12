@@ -156,6 +156,10 @@ body{
 		cursor:pointer;
 	}
 	
+	#header .auth-top .login form input.submit:hover{
+		background-image:url(../images/icons/btn-power-hover.png);
+	}
+	
 	/* hack firefox */
 	#header .auth-top .login form input.submit, x:-moz-any-link{
 		top:0;
