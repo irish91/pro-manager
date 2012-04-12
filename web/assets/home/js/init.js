@@ -4,7 +4,7 @@
  */
 // on document ready
 $(document).ready(function(){
-
+	
 	/**
 	 * Event: header - hover
 	 * -----------------
@@ -13,17 +13,32 @@ $(document).ready(function(){
 	 */
 	var headerTop = $("#header").css('top');
 	
+	// variable for delay
+	var timerHeader;
+	
+	// is timer on
+	var isTimerHeaderOn = false;
+	
 	// mouse in / mouse out
 	$("#header").hover(
 	function () {
 		
 		// show
 		animHeader(true, headerTop);
+		
+		// clear timer
+		if(isTimerHeaderOn === true){
+			clearTimeout(timerHeader);
+			isTimerHeaderOn = false;
+		}
 	}, 
 	function () {
 		
-		// hide
-		animHeader(false, headerTop);
+		// delay hide
+		timerHeader = setTimeout("animHeader(0, '" + headerTop + "')", 4000);
+		
+		// set timer to true
+		isTimerHeaderOn = true;
 	});
 	
 	/**
@@ -32,17 +47,32 @@ $(document).ready(function(){
 	 *  
 	 * - expand stats container on hover / shrink
 	 */
+	// variable for delay
+	var timerStats;
+	
+	// is timer on
+	var isTimerStatsOn = false;
+	
 	// mouse in / mouse out
 	$("#global-container").hover(
 	function () {
 		
 		// show
 		animStatistics(true);
+		
+		// clear timer
+		if(isTimerStatsOn === true){
+			clearTimeout(timerStats);
+			isTimerStatsOn = false;
+		}
 	}, 
 	function () {
+
+		// delay hide
+		timerStats = setTimeout("animStatistics(0)", 2000);
 		
-		//hide 
-		animStatistics(false);
+		// set timer on
+		isTimerStatsOn = true;
 	});
 		
 });
@@ -59,7 +89,7 @@ $(document).ready(function(){
  */
 var animHeader = function(show, headerTop){
 	
-	if(show === true){
+	if(show == true){
 		
 		$("#header").animate({
 		    top: '0px',
@@ -87,7 +117,7 @@ var animHeader = function(show, headerTop){
  */
 var animStatistics = function(show){
 	
-	if(show === true){
+	if(show == true){
 		
 		// display content
 		$('#statistics .content').css('display', 'block');
