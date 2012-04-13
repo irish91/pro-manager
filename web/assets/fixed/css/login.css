@@ -68,3 +68,18 @@
 	margin-top:0.5em;
 	margin-bottom:0.5em;
 }
+
+#content span.nav{
+	float:left;
+	padding-left:1em;
+	font-size:11px;
+}
+
+#content span.nav a{
+	color:orange;
+	text-decoration:none;
+}
+
+#content span.nav a:hover{
+	text-decoration:underline;
+}
