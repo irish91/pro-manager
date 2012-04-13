@@ -1,0 +1,28 @@
+{% extends '::tmpl-fixed.html.twig' %}
+
+
+
+
+
+{% block content %}
+<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('assets/fixed/css/login.css') }}" />
+
+<form method="post">
+	<p class="labels"><label for="username">Pseudo:</label> <label for="password">Mot de passe:</label></p>
+	<p class="inputs">
+	<input type="text" name="username" id="username" /> 
+	<input type="password" name="password" id="password" />
+	<input type="submit" name="login" value="" class="login" />
+	</p>
+	<span class="forgot-psw"><a href="#">Mot de passe oublié?</a></span>
+</form>
+
+<p class="buttons">
+<button class="fb-connect"></button>
+<br />Or<br />
+<button class="fb-register"></button>
+</p>
+
+<p class="new">Vous n'avez pas encore de compte?</p>
+<p><button class="register">Je m'inscris</button></p>
+{% endblock %}

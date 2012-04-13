@@ -1,0 +1,65 @@
+#content form p.labels{
+	color:#FFF;
+}
+
+#content form label{
+	float:left;
+	margin-left:5.5em;
+}
+
+#content form p.inputs{
+	clear:both;
+	padding-top:1em;
+	padding-left:4.5em;
+}
+
+#content form input.login{
+	position:relative;
+	top:-15px;
+}
+
+#content form span.forgot-psw{
+	font-size:9px;
+	float:right;
+	margin-right:180px;
+	margin-top:-25px;
+}
+
+/* hack firefox */
+@-moz-document url-prefix() { #content form span.forgot-psw{
+	margin-top:-15px;
+}}
+
+#content form span.forgot-psw a{
+	color:#efefef;
+}
+
+#content p.new{
+	float:right;
+	color:#FFF;
+	font-style:italic;
+	font-size:12px;
+	padding-right:2em;
+	padding-top:2em;
+}
+
+#content button.register{
+	float:right;
+	clear:right;
+	margin-right:2em;
+	font-size:19px;
+}
+
+#content p.buttons{
+	float:left;
+	margin-left:0;
+	padding-left:0;
+	width:200px;
+	text-align:center;
+	color:#FFF;
+}
+
+#content p.buttons button{
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+}

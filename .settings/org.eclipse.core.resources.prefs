@@ -1,3 +1,5 @@
 eclipse.preferences.version=1
-encoding//app/Resources/views/home.html.twig=UTF-8
+encoding//app/Resources/views/tmpl-home.html.twig=UTF-8
+encoding//src/Pmf/StaticBundle/Resources/views/Common/Block/footer.html.twig=UTF-8
 encoding//src/Pmf/StaticBundle/Resources/views/Page/home.html.twig=UTF-8
+encoding/<project>=UTF-8
