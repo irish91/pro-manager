@@ -15,6 +15,7 @@ framework:
     session:
         default_locale: %locale%
         auto_start:     true
+    translator: ~
 
 # Twig Configuration
 twig:
@@ -58,3 +59,16 @@ swiftmailer:
 jms_security_extra:
     secure_controllers:  true
     secure_all_services: false
+    
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: Pmf\UserBundle\Entity\User
+    
+fos_facebook:
+    file:   %kernel.root_dir%/../vendor/facebook/src/base_facebook.php
+    alias:  facebook
+    app_id: 123456879
+    secret: s3cr3t
+    cookie: true
+    permissions: [email, user_birthday, user_location]

@@ -1,0 +1,15 @@
+parameters:
+#    pmf_user.example.class: Pmf\UserBundle\Example
+
+services:
+#    pmf_user.example:
+#        class: %pmf_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+      my.facebook.user:
+              class: Pmf\UserBundle\Security\User\Provider\FacebookProvider
+              arguments:
+                  facebook: "@fos_facebook.api"
+                  userManager: "@fos_user.user_manager"
+                  validator: "@validator"
+                  container: "@service_container"
