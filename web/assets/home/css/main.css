@@ -132,7 +132,7 @@ body{
 	}}
 	
 
-#header .auth-top .register{
+#header .auth-top div.register{
 	height:65px;
 	width:233px;
 	position:relative;
@@ -140,7 +140,7 @@ body{
 	top:-117px;
 	padding-left:3px;
 }
-	#header .auth-top .register p{
+	#header .auth-top div.register p{
 		margin-right:0;
 		padding-right:0;
 		text-align:center;

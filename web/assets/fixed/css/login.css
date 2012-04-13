@@ -18,6 +18,10 @@
 	top:-15px;
 }
 
+@-moz-document url-prefix() { #content form input.login{
+	top:0;
+}}
+
 #content form span.forgot-psw{
 	font-size:9px;
 	float:right;
