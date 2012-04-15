@@ -7,6 +7,8 @@ page:
                     <p>Incarnez un manager homme ou femme et prenez le contrôle de votre club de foot en gérant les joueurs, les contrats, les matchs, les finances tout comme les infrastructures et bien plus encore.</p>
                     <p>Pro manager fait appel à votre ambition, votre talent d'entraineur et votre clairevoyance au momeent de prendre des grandes décisions. Relèverez-vous le défi?</p>
 
+back:
+    home: retour à l'accueil
 account:
     noaccount: vous n'avez pas encore de compte??
     register: inscription
