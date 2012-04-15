@@ -13,13 +13,13 @@ page:
 back:
     home: back home
 account:
-    noaccount: need an account?
-    register: signup
-    login: log in
-    pseudo: pseudo
-    password: password
+    noaccount: Need an account?
+    register: Sign up
+    login: Log in
+    pseudo: Pseudo
+    password: Password
     forgot:
-        password: forgot password?
+        password: Forgot password?
 
 footer:
     partnership: partnership
