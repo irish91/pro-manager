@@ -11,7 +11,43 @@ body{
 	overflow-x:hidden;
 }
 
+#i18n{
+	position:absolute;
+	top:0px;
+	right:5%;
 
+}
+
+#i18n ul.i18n{
+	padding:0;
+	margin:0;
+	padding:5px;
+	
+	background-color:#232323;
+	
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    
+    -moz-opacity:.65; filter:alpha(opacity=65); opacity:.65;
+}
+
+#i18n ul.i18n li{
+	color:#FFF;
+	list-style:none;
+	padding:0;
+	margin:0;
+	margin-top:5px;
+}
+
+#i18n ul.i18n li a{
+	text-decoration:none;
+	color:gray;
+}
+
+#i18n ul.i18n li a img{
+	padding-right:3px;
+}
 
 /*---------------------------------------------
 	 Form

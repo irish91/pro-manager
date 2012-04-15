@@ -20,9 +20,6 @@
         
         {% block scripts %}
         
-        	<!-- Librairies -->
-        	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-        	
         	<script src="{{ asset('assets/home/js/init.js') }}" type="text/javascript"></script>
         	
         {% endblock %}
@@ -31,6 +28,8 @@
     </head>
     <body>
     {% block body %}
+        
+        {% include 'PmfStaticBundle:Common/Block:common_body.html.twig' %}
         
         <!-- <img src="{{ asset('assets/home/images/background.png') }}" class="global-background" alt="" /> -->
         
