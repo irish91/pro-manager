@@ -4,7 +4,7 @@ imports:
 
 framework:
     #esi:             ~
-    #translator:      { fallback: %locale% }
+    translator:      { fallback: fr }
     secret:          %secret%
     charset:         UTF-8
     router:          { resource: "%kernel.root_dir%/config/routing.yml" }
@@ -72,3 +72,8 @@ fos_facebook:
     secret: s3cr3t
     cookie: true
     permissions: [email, user_birthday, user_location]
+    
+jms_i18n_routing:
+    default_locale: fr
+    locales: [fr, en]
+    strategy: prefix_except_default

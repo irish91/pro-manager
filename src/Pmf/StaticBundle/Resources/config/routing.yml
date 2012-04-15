@@ -4,10 +4,12 @@
 
 
 
-
+homepage:
+    pattern:  /
+    defaults: { _controller: PmfStaticBundle:Server:homepage}
 
 
 # must be last
 static:
     pattern:  /{page}
-    defaults: { _controller: PmfStaticBundle:Server:index, page: 'home' }
+    defaults: { _controller: PmfStaticBundle:Server:index}

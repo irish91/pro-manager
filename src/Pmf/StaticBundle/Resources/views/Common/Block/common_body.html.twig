@@ -1,8 +1,15 @@
 <div id="i18n">
 	<ul class="i18n">
+		{% if app.session.locale == 'fr' %}
 		<li>Langue: <img src="{{ asset('assets/common/images/icons/flags/fr.png') }}" />
 		<ul>
-			<li><a href="#"><img src="{{ asset('assets/common/images/icons/flags/us.png') }}" />en</a></li>
+			<li><a href="{{ path(app.request.get('_route'), {'_locale': 'en'}) }}"><img src="{{ asset('assets/common/images/icons/flags/us.png') }}" />en</a></li>
 		</ul></li>
+		{% elseif app.session.locale == 'en' %}
+		<li>Language: <img src="{{ asset('assets/common/images/icons/flags/us.png') }}" />
+		<ul>
+			<li><a href="{{ path(app.request.get('_route'), {'_locale': 'fr'}) }}"><img src="{{ asset('assets/common/images/icons/flags/fr.png') }}" />fr</a></li>
+		</ul></li>
+		{% endif %}
 	</ul>
 </div>

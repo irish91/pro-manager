@@ -26,5 +26,9 @@ class ServerController extends Controller
         // render current view
         return $this->render($template);
     }
+    
+    public function homepageAction(){
+    	return $this->render('PmfStaticBundle:Page:home.html.twig');
+    }
 }
 
