@@ -49,8 +49,8 @@
 		        		</div>
 		        		
 		        		<div class="login">
-		        			<span class="pseudo">Pseudo:</span>
-		        			<span class="password">Mot de passe:</span>
+		        			<span class="pseudo">{{ 'account.pseudo'|trans }}:</span>
+		        			<span class="password">{{ 'account.password'|trans }}</span>
 		        			
 		        			<div class="auth">
 		        				
@@ -68,9 +68,9 @@
 		        		</div>
 		        		
 		        		<div class="register">
-		        			<p>Vous n'avez pas encore de compte?</p>
+		        			<p>{{ 'account.noaccount'|trans }}</p>
 		        			
-		        			<p><button class="register">Je m'inscris</button></p>
+		        			<p><button class="register">{{ 'account.register'|trans }}</button></p>
 		        		</div>
 		        		
 		        	</div>
@@ -78,7 +78,7 @@
 		        	<div class="auth-bottom">
 		        		
 		        		<div class="links">
-		        			<p><a href="{{ path('fos_user_security_login') }}">{{ 'login'|trans }}</a> | <a href="#">{{ 'signup'|trans }}</a></p>
+		        			<p><a href="{{ path('fos_user_security_login') }}">{{ 'account.login'|trans }}</a> | <a href="#">{{ 'account.register'|trans }}</a></p>
 		        		</div>
 		        		
 		    		</div>

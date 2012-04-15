@@ -1,3 +1,31 @@
-# messages.en.yml
-login: log in
-signup: sign up
+# messages.fr.yml
+
+page:
+        home:
+                welcome: >
+                    <h1>Welcome to Pro Manager</h1>
+                    <h2>"The online football game revolution."</h2>
+                    <p>Play as a male or female manager and take control of your football club by managing players, contracts, games, finance as well as the infrastructure and much more.</p>
+                    <p>Manager Pro uses your ambition, your talent and your intuition when making major decisions. Will you accept the challenge?</p>
+           
+
+
+back:
+    home: back home
+account:
+    noaccount: need an account?
+    register: signup
+    login: log in
+    pseudo: pseudo
+    password: password
+    forgot:
+        password: forgot password?
+
+footer:
+    partnership: partnership
+    enrollment: enrollment
+    legal: legal
+    help:  help Pro Manager: evolution
+    bug: report a bug
+    contact: contact us
+    rights: all rights reserved

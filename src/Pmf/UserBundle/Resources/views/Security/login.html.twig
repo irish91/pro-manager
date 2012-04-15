@@ -1,22 +1,18 @@
 {% extends '::tmpl-fixed.html.twig' %}
 
-
-
-
-
 {% block content %}
 <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('assets/fixed/css/login.css') }}" />
 
 <span class="nav"><a href="{{ path('static', {'page': 'home'}) }}">< page d'accueil</a></span>
 
 <form method="post">
-	<p class="labels"><label for="username">Pseudo:</label> <label for="password">Mot de passe:</label></p>
+	<p class="labels"><label for="username">{{ 'account.pseudo'|trans }}:</label> <label for="password">{{ 'account.password'|trans }}:</label></p>
 	<p class="inputs">
 	<input type="text" name="username" id="username" /> 
 	<input type="password" name="password" id="password" />
 	<input type="submit" name="login" value="" class="login" />
 	</p>
-	<span class="forgot-psw"><a href="#">Mot de passe oublié?</a></span>
+	<span class="forgot-psw"><a href="#">{{ 'account.forgot.password'|trans }}</a></span>
 </form>
 
 <p class="buttons">
@@ -25,6 +21,6 @@
 <button class="fb-register"></button>
 </p>
 
-<p class="new">Vous n'avez pas encore de compte?</p>
-<p><button class="register">Je m'inscris</button></p>
+<p class="new">{{ 'account.noaccount'|trans }}</p>
+<p><button class="register">{{ 'account.register'|trans }}</button></p>
 {% endblock %}
