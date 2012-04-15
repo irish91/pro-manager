@@ -15,6 +15,7 @@ back:
 account:
     noaccount: Need an account?
     register: Sign up
+    register_alt: Sign up
     login: Log in
     pseudo: Pseudo
     password: Password
