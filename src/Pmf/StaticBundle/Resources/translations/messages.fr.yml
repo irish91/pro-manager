@@ -10,14 +10,14 @@ page:
 back:
     home: retour à l'accueil
 account:
-    noaccount: Vous n'avez pas encore de compte??
+    noaccount: Vous n'avez pas encore de compte?
     register: Inscription
     register_alt: Je m'inscris
     login: Connexion
     pseudo: Pseudo
     password: Mot de passe
     forgot:
-        password: Mot de passe oublié??
+        password: Mot de passe oublié?
 footer:
     partnership: partenariat
     enrollment: recrutement
