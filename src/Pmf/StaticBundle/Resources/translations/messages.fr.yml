@@ -12,6 +12,7 @@ back:
 account:
     noaccount: Vous n'avez pas encore de compte??
     register: Inscription
+    register_alt: Je m'inscris
     login: Connexion
     pseudo: Pseudo
     password: Mot de passe
