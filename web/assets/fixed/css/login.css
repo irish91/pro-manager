@@ -1,3 +1,7 @@
+body{
+	background-image:url(../../common/images/background-darker.png);
+}
+
 #content form{
 	clear:both;
 	padding-top:0.5em;
