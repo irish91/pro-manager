@@ -23,6 +23,7 @@ class AppKernel extends Kernel
         	new FOS\FacebookBundle\FOSFacebookBundle(),
         	new JMS\I18nRoutingBundle\JMSI18nRoutingBundle(),
         	new JMS\TranslationBundle\JMSTranslationBundle(),
+        	new Knp\Bundle\MenuBundle\KnpMenuBundle(),
         
             new Pmf\UserBundle\PmfUserBundle(),
         );
