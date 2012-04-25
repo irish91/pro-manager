@@ -216,9 +216,9 @@ body{
 	height:165px;
 	/* overflow:auto; */
 	margin-top:5px;
-	background-color:#000;
+	
 	color:#FFF;
-	font-size:11px;
+	font-size:12px;
 	position:relative;
 	text-align:center;
 	padding:3px;
@@ -226,7 +226,8 @@ body{
 	top:265px;
 	left:40px;
 	
-	-moz-opacity:.65; filter:alpha(opacity=65); opacity:.65;
+	background-image:url(../images/bg-repeat-black-opac-65.png);
+	/*-moz-opacity:.65; filter:alpha(opacity=65); opacity:.65;*/
 	
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
