@@ -2,7 +2,7 @@ body{
 	margin:0;
 	padding:0;
 	font-size:14px;
-	font-family:"Verdana";
+	font-family:"Tahoma";
 	background-color:#000000;
 	background-image:url(../../common/images/background.png);
 	background-repeat:no-repeat;
@@ -47,6 +47,26 @@ body{
 
 #i18n ul.i18n li a img{
 	padding-right:3px;
+}
+
+#info-center{
+	position:absolute;
+	right:10%;
+	top:10%;
+	width:154px;
+	height:32px;
+	background-image:url(../images/info-center/background.png);
+}
+
+#info-center img{
+	position:relative;
+	top:-20px;
+	left:5px;
+	cursor:pointer;
+}
+
+#info-center img:hover{
+	top:-25px;
 }
 
 /*---------------------------------------------
