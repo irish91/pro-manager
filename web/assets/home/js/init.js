@@ -11,7 +11,8 @@ $(document).ready(function(){
 	 *  
 	 * - slides down on hover / slides up
 	 */
-	var headerTop = $("#header").css('top');
+	//var headerTop = $("#header").css('top');
+	var headerTop = '-75px';
 	
 	// variable for delay
 	var timerHeader;
