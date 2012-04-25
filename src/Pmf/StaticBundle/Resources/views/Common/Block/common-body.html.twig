@@ -1,3 +1,4 @@
+<!-- internalisation - switch language -->
 <div id="i18n">
 	<ul class="i18n">
 		{% if app.session.locale == 'fr' %}
@@ -12,4 +13,12 @@
 		</ul></li>
 		{% endif %}
 	</ul>
+</div>
+
+<!-- information center - links to main pages -->
+<div id="info-center">
+	<a href="{{ path('homepage') }}"><img src="{{ asset('assets/common/images/info-center/icons/home.png') }}" alt="" /></a>
+	<a href=""><img src="{{ asset('assets/common/images/info-center/icons/news.png') }}" alt="" /></a>
+	<a href=""><img src="{{ asset('assets/common/images/info-center/icons/help.png') }}" alt="" /></a>
+	<a href=""><img src="{{ asset('assets/common/images/info-center/icons/reddit.png') }}" alt="" /></a>
 </div>

@@ -49,6 +49,25 @@ body{
 	padding-right:3px;
 }
 
+#info-center{
+	position:absolute;
+	right:10%;
+	top:10%;
+	width:154px;
+	height:32px;
+	background-image:url(../images/info-center/background.png);
+}
+
+#info-center img{
+	position:relative;
+	top:-20px;
+	cursor:pointer;
+}
+
+#info-center img:hover{
+	top:-25px;
+}
+
 /*---------------------------------------------
 	 Form
   ---------------------------------------------
