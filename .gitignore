@@ -1,6 +1,5 @@
 app/cache/*
 app/logs/*
 app/vendor/*
-web/app.php
 app/config/parameters.ini
 
