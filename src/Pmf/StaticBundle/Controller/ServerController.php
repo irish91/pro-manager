@@ -9,7 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 /**
  *
  * @author Tobias Hourst <tobiashourst@elcyone.com>
- *
+ * last updated: 30/04/12
  */
 class ServerController extends Controller
 {
