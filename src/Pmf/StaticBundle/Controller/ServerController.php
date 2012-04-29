@@ -9,7 +9,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 /**
  *
  * @author Tobias Hourst <tobiashourst@elcyone.com>
- * last updated: 30/04/12
  */
 class ServerController extends Controller
 {
@@ -18,11 +17,16 @@ class ServerController extends Controller
     {	
         // get template
         $template = sprintf("PmfStaticBundle:Page:%s.html.twig", $page);
+
         
+
         // check if template exists
         if(!$this->get('templating')->exists($template))
+
         	throw new NotFoundHttpException("The specified page does not exist.");
+
         
+
         // render current view
         return $this->render($template);
     }
@@ -31,4 +35,5 @@ class ServerController extends Controller
     	return $this->render('PmfStaticBundle:Page:home.html.twig');
     }
 }
+
 
