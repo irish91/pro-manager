@@ -349,6 +349,16 @@ img#ball-shoes-field{
 	z-index:0;
 }
 
+a#arrow-nav img{
+	position:absolute;
+	right:-85px;
+	top:210px;
+}
+
+a#arrow-nav img:hover{
+	right:-90px;
+}
+
 /*---------------------------------------------
 	 Footer
   ---------------------------------------------
