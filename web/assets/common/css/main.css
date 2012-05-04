@@ -60,8 +60,8 @@ body{
 
 #info-center img{
 	position:relative;
-	top:-20px;
-	left:5px;
+	top:-16px;
+	left:12px;
 	cursor:pointer;
 }
 
@@ -180,11 +180,11 @@ input:focus { outline:none; }
 
 a{
 	color:#FFF;
-	text-decoration:underline;
+	text-decoration:none;
 }
 
 a:hover{
-	color:#CCC;
+	color:rgb(128,0,0);
 	text-decoration:none;
 }
 

@@ -5,28 +5,28 @@ page:
                 welcome: >
                     <h1>Welcome to Pro Manager</h1>
                     <h2>"The online football game revolution."</h2>
-                    <p>Play as a male or female manager and take control of your football club by managing players, contracts, games, finance as well as the infrastructure and much more.</p>
-                    <p>Manager Pro uses your ambition, your talent and your intuition when making major decisions. Will you accept the challenge?</p>
+                    <p>Play as a male or female manager and take full control of your football club by managing players, contracts, games, finance, by building up infrastructures and much more.</p>
+                    <p>Pro Manager Evolution stimulates your ambition and your talent as well as your intuition when comes to make major decisions. Would you accept the challenge?</p>
            
 
 
 back:
     home: back home
 account:
-    noaccount: Need an account?
+    noaccount: You do not have an account yet?
     register: Sign up
     register_alt: Sign up
     login: Log in
     pseudo: Pseudo
     password: Password
     forgot:
-        password: Forgot password?
+        password: Forgot your password?
 
 footer:
-    partnership: partnership
-    enrollment: enrollment
-    legal: legal
-    help:  help Pro Manager: evolution
-    bug: report a bug
-    contact: contact us
-    rights: all rights reserved
+    partnership: Partnership
+    enrollment: Enrollment
+    legal: Legal Terms
+    help:  Help Pro Manager Evolution
+    bug: Report a Bug!
+    contact: Contact Us!
+    rights: All rights reserved

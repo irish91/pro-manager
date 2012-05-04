@@ -44,8 +44,26 @@
 		        	
 		        	<div class="auth-top">
 		        	
-		        		<div class="social">
-		        			
+		             		<div class="social">
+	  	         	 		 <div class="fb-root"></div>
+                             <script>
+                             window.fbAsyncInit = function() {
+                             FB.init({
+                             appId      : 'YOUR_APP_ID',
+                             status     : true, 
+                             cookie     : true,
+                             xfbml      : true,
+                             oauth      : true,
+                             });
+                              };
+                             (function(d){
+                              var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+                              js = d.createElement('script'); js.id = id; js.async = true;
+                              js.src = "//connect.facebook.net/en_US/all.js";
+                              d.getElementsByTagName('head')[0].appendChild(js);
+                              }(document));
+                               </script>
+                               <div class="fb-login-button">Login with Facebook</div>
 		        		</div>
 		        		
 		        		<div class="login">
@@ -78,7 +96,7 @@
 		        	<div class="auth-bottom">
 		        		
 		        		<div class="links">
-		        			<p><a href="{{ path('fos_user_security_login') }}">{{ 'account.login'|trans }}</a> | <a href="#">{{ 'account.register'|trans }}</a></p>
+		        			<p><a href="{{ path('fos_user_security_login') }}"> &nbsp; {{ 'account.login'|trans }}</a> | <a href="#">{{ 'account.register'|trans }}&nbsp; &nbsp;</a></p>
 		        		</div>
 		        		
 		    		</div>
@@ -91,9 +109,14 @@
 	    <div id="container">
 	    {% block container %}
 	    
-	        <img id="char-managers" src="{{ asset('assets/home/images/characters-managers.png') }}" alt="Managers" />
-	        	<img id="char-players" src="{{ asset('assets/home/images/characters-players.png') }}" alt="Players" />
+	        	<img id="player_ozil" src="{{ asset('assets/home/images/player_ozil.png') }}" alt="player_ozil" />
+				<img id="characters-managers" src="{{ asset('assets/home/images/characters-managers.png') }}" alt="characters-managers" />
+	        	<img id="player_cristina" src="{{ asset('assets/home/images/player_cristina.png') }}" alt="player cristina" />
 	        	<img id="ball-shoes-field" src="{{ asset('assets/home/images/ball-shoes-field.png') }}" alt="Ball, shoes and field" />
+	    
+				
+				
+	        	<a id="arrow-nav" href="#"><img src="{{ asset('assets/home/images/arrow-nav.png') }}" alt="Navigation" /></a>
 	        	
 	        	<div id="logo"></div>
 	        	
@@ -129,12 +152,12 @@
 			        		<div class="stats">
 			        			<p class="members"><span>Membres |</span> 0</p>
 			        			<p class="online"><span>En ligne |</span> 0</span></p>
-			        			<p class="new-members-today"><span>Nouveaux aujourd'hui |</span> 0</span></p>
+			        			<p class="new-members-today"><span>Nouveaux aujourd'hui |</span> 100</span></p>
 			        		</div>
 			        </div>
 			        
 			       	<div class="bar">
-			        		<p><a href="#">Statistiques du jeu / joueurs</a></p>
+			        		<p>Statistiques du jeu / joueurs</p>
 			        </div>
 		        </div>
 			{% endblock %}
