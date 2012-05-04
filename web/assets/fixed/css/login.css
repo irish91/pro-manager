@@ -4,27 +4,29 @@ body{
 
 #content form{
 	clear:both;
-	padding-top:0.5em;
+	padding-top:0.2em;
 }
 
 #content form p.labels{
-	color:#FFF;
+	color:white;
 }
 
 #content form label{
 	float:left;
-	margin-left:5.5em;
+	margin-left:60px;
 }
 
 #content form p.inputs{
 	clear:both;
-	padding-top:1em;
-	padding-left:4.5em;
+	padding-top:2px;
+	padding-left:5px;
 }
 
 #content form input.login{
 	position:relative;
-	top:-15px;
+	top:-2px;
+	margin-right:1px;
+	
 }
 
 @-moz-document url-prefix() { #content form input.login{
@@ -32,16 +34,16 @@ body{
 }}
 
 #content form span.forgot-psw{
-	font-size:9px;
+	font-size:11px;
 	float:right;
-	margin-right:180px;
-	margin-top:-25px;
+	margin-right:18px;
+	margin-top:-2px;
 	font-style:italic;
 }
 
 /* hack firefox */
 @-moz-document url-prefix() { #content form span.forgot-psw{
-	margin-top:-15px;
+	margin-top:-10px;
 }}
 
 #content form span.forgot-psw a{
@@ -52,7 +54,7 @@ body{
 	float:right;
 	color:#FFF;
 	font-style:italic;
-	font-size:12px;
+	font-size:10px;
 	padding-right:2em;
 	padding-top:2em;
 }
@@ -61,7 +63,7 @@ body{
 	float:right;
 	clear:right;
 	margin-right:2em;
-	font-size:19px;
+	font-size:10px;
 }
 
 #content p.buttons{
@@ -81,8 +83,8 @@ body{
 #content span.nav{
 	float:left;
 	padding-left:1em;
-	padding-top:3px;
-	font-size:11px;
+	padding-top:2px;
+	font-size:8px;
 }
 
 #content span.nav a{
