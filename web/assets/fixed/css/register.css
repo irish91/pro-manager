@@ -1,0 +1,11 @@
+body{
+	background-image:url(../images/registration/background.png);
+}
+
+#container{
+	position:relative;
+	width:666px;
+	height:814px;
+	background-image:url(../images/registration/bg-profile.png);
+	margin:0 auto 0 auto;	
+}
