@@ -251,8 +251,9 @@ body{
 }
 
 #content p{
-	text-align:left;
+	text-align:right;
 	padding-left:5px;
+	padding-right:5px;
 }
 
 
