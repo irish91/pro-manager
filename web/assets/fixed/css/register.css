@@ -9,3 +9,17 @@ body{
 	background-image:url(../images/registration/bg-profile.png);
 	margin:0 auto 0 auto;	
 }
+
+
+#photo-area{
+	width:164px;
+	height:200px;
+	position:relative;
+	left:4em;
+	top:1.5em;
+}
+
+#photo-area .trombone{
+	position:absolute;
+	top:-20px;
+}
