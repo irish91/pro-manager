@@ -18,13 +18,18 @@ body{
 
 #content form p.inputs{
 	clear:both;
-	padding-top:2px;
-	padding-left:5px;
+	padding-top:10px;
+	padding-left:3em;
+}
+
+#content form p.inputs input{
+	min-height:20px;
+	margin-left:5px;
 }
 
 #content form input.login{
 	position:relative;
-	top:-2px;
+	top:-15px;
 	margin-right:1px;
 	
 }
@@ -37,7 +42,7 @@ body{
 	font-size:11px;
 	float:right;
 	margin-right:18px;
-	margin-top:-2px;
+	margin-top:-15px;
 	font-style:italic;
 }
 
@@ -57,6 +62,7 @@ body{
 	font-size:10px;
 	padding-right:2em;
 	padding-top:2em;
+	width:150px;
 }
 
 #content button.register{
