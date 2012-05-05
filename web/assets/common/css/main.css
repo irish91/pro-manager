@@ -9,6 +9,7 @@ body{
 	background-position:center center;
 	background-attachment:fixed;
 	overflow-x:hidden;
+	-webkit-text-size-adjust: auto;
 }
 
 #i18n{
