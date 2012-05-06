@@ -39,3 +39,64 @@ h1{
 	margin-top:6em;
 	color:#ff5f5f;
 }
+
+/*---------------------------------------------
+	 Form
+  ---------------------------------------------
+*/
+form{
+	margin: 0;
+	padding: 0;
+	padding-top:50px;
+	margin:0 auto 0 auto;
+	width: 90%; 
+}
+
+form div{
+	margin-bottom:0.7em;
+}
+
+form label{
+	float: left;
+	width: 40%;
+}
+
+form input, textarea{
+	width: 40%;
+	margin-bottom: 5px;
+}
+
+form textarea{
+	width: 250px;
+	height: 150px;
+}
+
+form select{
+	width:30%;
+}
+
+form select#fos_user_registration_form_birthday_day{
+	width:50px;
+}
+
+form select#fos_user_registration_form_birthday_month{
+	width:50px;
+}
+
+form select#fos_user_registration_form_birthday_year{
+	width:100px;
+}
+
+form .boxes{
+	width: 1em;
+}
+
+
+form input[type=text], form input[type=password], form input[type=email]{
+	border:0;
+	background:none;
+	-webkit-box-shadow:none;
+	-webkit-border-radius:0;
+	
+	background-color:#EFEFEF
+}
