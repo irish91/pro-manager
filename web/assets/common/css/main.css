@@ -1,15 +1,24 @@
+html{
+	background-image: url(../../common/images/background.png);
+	background-repeat:-no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+	background-color:#000;
+}
+
 body{
 	margin:0;
 	padding:0;
-	font-size:14px;
+	font-size:1em;
 	font-family:"Tahoma";
-	background-color:#000000;
-	background-image:url(../../common/images/background.png);
-	background-repeat:no-repeat;
-	background-position:center center;
-	background-attachment:fixed;
+
 	overflow-x:hidden;
-	-webkit-text-size-adjust: auto;
 }
 
 #i18n{
@@ -67,7 +76,7 @@ body{
 }
 
 #info-center img:hover{
-	top:-25px;
+	top:-20px;
 }
 
 /*---------------------------------------------
@@ -195,4 +204,20 @@ img.load{
 
 button{
 	cursor:pointer;
+}
+
+/*---------------------------------------------
+	 Footer
+  ---------------------------------------------
+*/
+#footer{
+	position:relative;
+	width:1024px;
+	height:100px;
+	text-align:center;
+	font-size:80%;
+	color:#EFEFEF;
+	margin: 0 auto 0 auto;
+	padding-bottom:100px;
+	clear:both;
 }

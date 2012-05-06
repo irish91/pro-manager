@@ -2,14 +2,12 @@
 <html>
     <head>
         {% include 'PmfStaticBundle:Common/Block:head.html.twig' %}
-		
-        {% block stylesheets %}
-				<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('assets/fixed/css/main.css') }}" />	
-		{% endblock %}
         
         {% block scripts %}
-
         {% endblock %}
+        
+        {% block stylesheets %}	
+		{% endblock %}
         
         
     </head>
@@ -18,17 +16,24 @@
     	
     	{% include 'PmfStaticBundle:Common/Block:common-body.html.twig' %}
     	
-    	<div id="container">
+    	
+    	{% block global_container %}
+    	<div id="global-container">
+    	
 		    	<div id="content">
 		    	{% block content %}
 		    	
 		    	{% endblock %}
 		    	</div>
+		    	
 	    </div>
+	    {% endblock %}
     	
+    	{% block footer %}
     	<div id="footer">
     		{% include 'PmfStaticBundle:Common/Block:footer.html.twig' %}
     	</div>
+    	{% endblock %}
     	
     {% endblock %}
     </body>

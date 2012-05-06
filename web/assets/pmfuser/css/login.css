@@ -1,5 +1,15 @@
-body{
+html{
 	background-image:url(../../common/images/background-darker.png);
+}
+
+#content{
+	width:376px;
+	height:237px;
+	margin:0 auto 0 auto;
+	position:relative;
+	margin-top:10em;
+	margin-bottom:10em;
+	background-image:url(../images/red-container.png)
 }
 
 #content form{

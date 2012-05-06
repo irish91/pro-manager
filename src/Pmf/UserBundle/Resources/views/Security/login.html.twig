@@ -1,7 +1,7 @@
-{% extends '::tmpl-fixed.html.twig' %}
+{% extends '::base.html.twig' %}
 
 {% block content %}
-<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('assets/fixed/css/login.css') }}" />
+<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('assets/pmfuser/css/login.css') }}" />
 
 <form method="post">
 	<p class="labels"><label for="username">{{ 'account.pseudo'|trans }}:</label> <label for="password">{{ 'account.password'|trans }}:</label></p>
