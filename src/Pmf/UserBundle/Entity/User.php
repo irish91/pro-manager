@@ -22,11 +22,6 @@ class User extends BaseUser
     /**
      * @ORM\Column(type="string", length="255")
      */
-    protected $pseudo;
-    
-    /**
-     * @ORM\Column(type="string", length="255")
-     */
     protected $firstname;
     
     /**
@@ -60,7 +55,7 @@ class User extends BaseUser
     protected $philosophy;
     
     /**
-     * @ORM\Column(type="string", length="255")
+     * @ORM\Column(type="string", length="255", nullable=true)
      */
     protected $facebookID;
     
@@ -169,27 +164,6 @@ class User extends BaseUser
     	if (isset($fbdata['email'])) {
     		$this->setEmail($fbdata['email']);
     	}
-    }
-    
-
-    /**
-     * Set pseudo
-     *
-     * @param string $pseudo
-     */
-    public function setPseudo($pseudo)
-    {
-        $this->pseudo = $pseudo;
-    }
-
-    /**
-     * Get pseudo
-     *
-     * @return string 
-     */
-    public function getPseudo()
-    {
-        return $this->pseudo;
     }
 
     /**

@@ -16,7 +16,7 @@ class RegistrationFormType extends BaseType
 {
     public function buildForm(FormBuilder $builder, array $options)
     {
-        $builder->add('pseudo', 'text', array(
+        $builder->add('username', 'text', array(
         	'label' => 'Pseudo'		
         ));
         
@@ -32,7 +32,7 @@ class RegistrationFormType extends BaseType
         		'label' => 'Email'
         ));
         
-        $builder->add('password', 'repeated', array(
+        $builder->add('plainPassword', 'repeated', array(
         		'type' => 'password',
 			    'invalid_message' => 'The password fields must match.',
 			    'options' => array('label' => 'Mot de Passe'),
