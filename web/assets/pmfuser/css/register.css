@@ -12,13 +12,6 @@ html{
 	left:4em;
 }
 
-#global-container{
-	position:relative;
-	width:1024px;
-	margin:0 auto 0 auto;
-	overflow:visible;
-}
-
 img#coffee{
 	position:absolute;
 	left:-370px;

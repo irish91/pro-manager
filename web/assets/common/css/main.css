@@ -21,10 +21,17 @@ body{
 	overflow-x:hidden;
 }
 
+#global-container{
+	position:relative;
+	width:780px;
+	margin:0 auto 0 auto;
+	overflow:visible;
+}
+
 #i18n{
 	position:absolute;
 	top:0px;
-	right:5%;
+	right:-200px;
 
 }
 
@@ -61,8 +68,8 @@ body{
 
 #info-center{
 	position:absolute;
-	right:10%;
-	top:10%;
+	right:-200px;
+	top:100px;
 	width:154px;
 	height:32px;
 	background-image:url(../images/info-center/background.png);

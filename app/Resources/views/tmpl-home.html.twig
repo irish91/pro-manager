@@ -29,11 +29,12 @@
     <body>
     {% block body %}
         
-        {% include 'PmfStaticBundle:Common/Block:common-body.html.twig' %}
         
         <!-- <img src="{{ asset('assets/home/images/background.png') }}" class="global-background" alt="" /> -->
         
         <div id="global-container">
+        	
+        	{% include 'PmfStaticBundle:Common/Block:common-body.html.twig' %}
         	
         	<div id="header">
         	{% block header %}
