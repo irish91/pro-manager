@@ -22,12 +22,42 @@ class User extends BaseUser
     /**
      * @ORM\Column(type="string", length="255")
      */
+    protected $pseudo;
+    
+    /**
+     * @ORM\Column(type="string", length="255")
+     */
     protected $firstname;
     
     /**
      * @ORM\Column(type="string", length="255")
      */
     protected $lastname;
+    
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    protected $birthday;
+    
+    /**
+     * @ORM\Column(type="string", length="255")
+     */
+    protected $gender;
+    
+    /**
+     * @ORM\Column(type="string", length="255")
+     */
+    protected $country;
+    
+    /**
+     * @ORM\Column(type="string", length="255")
+     */
+    protected $language;
+    
+    /**
+     * @ORM\Column(type="string", length="255")
+     */
+    protected $philosophy;
     
     /**
      * @ORM\Column(type="string", length="255")
@@ -59,5 +89,186 @@ class User extends BaseUser
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set firstname
+     *
+     * @param string $firstname
+     */
+    public function setFirstname($firstname)
+    {
+        $this->firstname = $firstname;
+    }
+
+    /**
+     * Get firstname
+     *
+     * @return string 
+     */
+    public function getFirstname()
+    {
+        return $this->firstname;
+    }
+
+    /**
+     * Set lastname
+     *
+     * @param string $lastname
+     */
+    public function setLastname($lastname)
+    {
+        $this->lastname = $lastname;
+    }
+
+    /**
+     * Get lastname
+     *
+     * @return string 
+     */
+    public function getLastname()
+    {
+        return $this->lastname;
+    }
+
+    /**
+     * Set facebookID
+     *
+     * @param string $facebookID
+     */
+    public function setFacebookID($facebookID)
+    {
+        $this->facebookID = $facebookID;
+    }
+
+    /**
+     * Get facebookID
+     *
+     * @return string 
+     */
+    public function getFacebookID()
+    {
+        return $this->facebookID;
+    }
+    
+    /**
+     * @param Array
+     */
+    public function setFBData($fbdata)
+    {
+    	if (isset($fbdata['id'])) {
+    		$this->setFacebookID($fbdata['id']);
+    		$this->addRole('ROLE_FACEBOOK');
+    	}
+    	if (isset($fbdata['first_name'])) {
+    		$this->setFirstname($fbdata['first_name']);
+    	}
+    	if (isset($fbdata['last_name'])) {
+    		$this->setLastname($fbdata['last_name']);
+    	}
+    	if (isset($fbdata['email'])) {
+    		$this->setEmail($fbdata['email']);
+    	}
+    }
+    
+
+    /**
+     * Set pseudo
+     *
+     * @param string $pseudo
+     */
+    public function setPseudo($pseudo)
+    {
+        $this->pseudo = $pseudo;
+    }
+
+    /**
+     * Get pseudo
+     *
+     * @return string 
+     */
+    public function getPseudo()
+    {
+        return $this->pseudo;
+    }
+
+    /**
+     * Set gender
+     *
+     * @param string $gender
+     */
+    public function setGender($gender)
+    {
+        $this->gender = $gender;
+    }
+
+    /**
+     * Get gender
+     *
+     * @return string 
+     */
+    public function getGender()
+    {
+        return $this->gender;
+    }
+
+    /**
+     * Set country
+     *
+     * @param string $country
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
+    }
+
+    /**
+     * Get country
+     *
+     * @return string 
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * Set language
+     *
+     * @param string $language
+     */
+    public function setLanguage($language)
+    {
+        $this->language = $language;
+    }
+
+    /**
+     * Get language
+     *
+     * @return string 
+     */
+    public function getLanguage()
+    {
+        return $this->language;
+    }
+
+    /**
+     * Set philosophy
+     *
+     * @param string $philosophy
+     */
+    public function setPhilosophy($philosophy)
+    {
+        $this->philosophy = $philosophy;
+    }
+
+    /**
+     * Get philosophy
+     *
+     * @return string 
+     */
+    public function getPhilosophy()
+    {
+        return $this->philosophy;
     }
 }

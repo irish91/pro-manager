@@ -2,24 +2,40 @@ body{
 	background-image:url(../images/registration/background.png);
 }
 
-#container{
+#registration-p1{
 	position:relative;
 	width:666px;
 	height:814px;
 	background-image:url(../images/registration/bg-profile.png);
-	margin:0 auto 0 auto;	
+	background-repeat:no-repeat;
+	margin:0 auto 0 auto;
+	left:4em;
 }
 
+#content{
+	padding-left:4em;
+	padding-right:7em;
+	padding-top:4em;
+}
 
 #photo-area{
 	width:164px;
 	height:200px;
 	position:relative;
-	left:4em;
 	top:1.5em;
+	float:left;
 }
 
 #photo-area .trombone{
 	position:absolute;
 	top:-20px;
+}
+
+h1{
+	text-align:center;
+	font-size:23px;
+	font-weight:normal;
+	margin-right:2em;
+	margin-top:6em;
+	color:#ff5f5f;
 }

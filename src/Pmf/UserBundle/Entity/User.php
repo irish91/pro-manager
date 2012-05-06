@@ -22,12 +22,42 @@ class User extends BaseUser
     /**
      * @ORM\Column(type="string", length="255")
      */
+    protected $pseudo;
+    
+    /**
+     * @ORM\Column(type="string", length="255")
+     */
     protected $firstname;
     
     /**
      * @ORM\Column(type="string", length="255")
      */
     protected $lastname;
+    
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    protected $birthday;
+    
+    /**
+     * @ORM\Column(type="string", length="255")
+     */
+    protected $gender;
+    
+    /**
+     * @ORM\Column(type="string", length="255")
+     */
+    protected $country;
+    
+    /**
+     * @ORM\Column(type="string", length="255")
+     */
+    protected $language;
+    
+    /**
+     * @ORM\Column(type="string", length="255")
+     */
+    protected $philosophy;
     
     /**
      * @ORM\Column(type="string", length="255")
@@ -141,4 +171,124 @@ class User extends BaseUser
     	}
     }
     
+
+    /**
+     * Set pseudo
+     *
+     * @param string $pseudo
+     */
+    public function setPseudo($pseudo)
+    {
+        $this->pseudo = $pseudo;
+    }
+
+    /**
+     * Get pseudo
+     *
+     * @return string 
+     */
+    public function getPseudo()
+    {
+        return $this->pseudo;
+    }
+
+    /**
+     * Set gender
+     *
+     * @param string $gender
+     */
+    public function setGender($gender)
+    {
+        $this->gender = $gender;
+    }
+
+    /**
+     * Get gender
+     *
+     * @return string 
+     */
+    public function getGender()
+    {
+        return $this->gender;
+    }
+
+    /**
+     * Set country
+     *
+     * @param string $country
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
+    }
+
+    /**
+     * Get country
+     *
+     * @return string 
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * Set language
+     *
+     * @param string $language
+     */
+    public function setLanguage($language)
+    {
+        $this->language = $language;
+    }
+
+    /**
+     * Get language
+     *
+     * @return string 
+     */
+    public function getLanguage()
+    {
+        return $this->language;
+    }
+
+    /**
+     * Set philosophy
+     *
+     * @param string $philosophy
+     */
+    public function setPhilosophy($philosophy)
+    {
+        $this->philosophy = $philosophy;
+    }
+
+    /**
+     * Get philosophy
+     *
+     * @return string 
+     */
+    public function getPhilosophy()
+    {
+        return $this->philosophy;
+    }
+
+    /**
+     * Set birthday
+     *
+     * @param datetime $birthday
+     */
+    public function setBirthday($birthday)
+    {
+        $this->birthday = $birthday;
+    }
+
+    /**
+     * Get birthday
+     *
+     * @return datetime 
+     */
+    public function getBirthday()
+    {
+        return $this->birthday;
+    }
 }

@@ -6,10 +6,16 @@ services:
 #        class: %pmf_user.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]
 
-      my.facebook.user:
-              class: Pmf\UserBundle\Security\User\Provider\FacebookProvider
-              arguments:
-                  facebook: "@fos_facebook.api"
-                  userManager: "@fos_user.user_manager"
-                  validator: "@validator"
-                  container: "@service_container"
+    my.facebook.user:
+        class: Pmf\UserBundle\Security\User\Provider\FacebookProvider
+        arguments:
+            facebook: "@fos_facebook.api"
+            userManager: "@fos_user.user_manager"
+            validator: "@validator"
+            container: "@service_container"
+     
+    pmf_user.registration.form.type:
+        class: Pmf\UserBundle\Form\Type\RegistrationFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: pmf_user_registration }

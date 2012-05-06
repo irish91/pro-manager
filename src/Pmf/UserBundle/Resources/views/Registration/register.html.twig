@@ -3,11 +3,23 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('assets/fixed/css/register.css') }}" />
 
-	
-	<div id="photo-area">
-		<img class="trombone" src="{{ asset('resources/images/profile/trombone.png') }}">
-		<img class="picture" src="{{ asset('resources/images/profile/blank.png') }}">
-	</div>
-	
+<div id="registration-p1">
+	<div id="content">
 
+		
+		<div id="photo-area">
+			<img class="trombone" src="{{ asset('resources/images/profile/trombone.png') }}">
+			<img class="picture" src="{{ asset('resources/images/profile/blank.png') }}">
+		</div>
+		
+		<h1>-CREEZ VOTRE PROFIL-</h1>
+		
+		<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
+			
+			{{ form_widget(form) }}
+			
+		</form>
+	
+	</div>	
+</div>
 {% endblock %}
