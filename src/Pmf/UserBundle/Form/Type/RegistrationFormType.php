@@ -28,8 +28,8 @@ class RegistrationFormType extends BaseType
         		'label' => 'Prénom'
         ));
         
-        $builder->add('email', 'text', array(
-        		'label' => 'Prénom'
+        $builder->add('email', 'email', array(
+        		'label' => 'Email'
         ));
         
         $builder->add('password', 'repeated', array(
