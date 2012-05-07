@@ -49,15 +49,20 @@ class LoginSuccessHandler implements AuthenticationSuccessHandlerInterface
      */
     public function onAuthenticationSuccess(Request $request, TokenInterface $token) 
     {
+    	// redirect not active user to create team page
         if ($this->security->isGranted('ROLE_USER')) {
 
         	$response = new RedirectResponse($this->router->generate('registration_create_team'));
 
-	    } elseif ($this->security->isGranted('ROLE_ACTIVE_USER')) { 
-	    	
-	      $referer_url = $request->headers->get('referer'); 
+	    }
+	    // redirect active user to the game 
+	    elseif ($this->security->isGranted('ROLE_ACTIVE_USER')) 
+	    { 
+	    
+	     	// !!this is temporary!!
+	      	$referer_url = $request->headers->get('referer'); 
 	             
-	      $response = new RedirectResponse($referer_url); 
+	      	$response = new RedirectResponse($referer_url); 
 	    } 
 	    
 	    return $response;
