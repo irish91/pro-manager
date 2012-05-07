@@ -76,12 +76,12 @@
 		        				<p class="form-logged">
 		        					<form action="{{ path("fos_user_security_check") }}" method="post">
 		        					
+		        						<input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
 		        						
+		        						<input class="username" type="text" name="_username" id="username" size="10" />
+		        						<input class="password" type="password" name="_password" id="password" size="10" />
 		        						
-		        						<input class="username" type="text" name="username" id="username" size="10" />
-		        						<input class="password" type="password" name="password" id="password" size="10" />
-		        						
-		        						<input type="submit" name="login" value="" class="login" /> 
+		        						<input type="submit" name="_login" id="_login" value="" class="login" /> 
 		        					</form>
 		        				</p>
 		        				

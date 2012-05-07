@@ -36,7 +36,11 @@ class ServerController extends Controller
      */
     public function homepageAction(){
     	
-    	return $this->render('PmfStaticBundle:Page:home.html.twig');
+    	$csrfToken = $this->container->get('form.csrf_provider')->generateCsrfToken('authenticate');
+    	
+    	return $this->render('PmfStaticBundle:Page:home.html.twig', array(
+    		'csrf_token' => $csrfToken,
+    	));
     }
 }
 
