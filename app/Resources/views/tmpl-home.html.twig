@@ -74,7 +74,10 @@
 		        			<div class="auth">
 		        				
 		        				<p class="form-logged">
-		        					<form>
+		        					<form action="{{ path("fos_user_security_check") }}" method="post">
+		        					
+		        						
+		        						
 		        						<input class="username" type="text" name="username" id="username" size="10" />
 		        						<input class="password" type="password" name="password" id="password" size="10" />
 		        						

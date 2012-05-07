@@ -3,12 +3,19 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('assets/pmfuser/css/login.css') }}" />
 
-<form method="post">
+{% if error %}
+    <div>{{ error|trans({}, 'FOSUserBundle') }}</div>
+{% endif %}
+
+<form action="{{ path("fos_user_security_check") }}" method="post">
+
+	<input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+	
 	<p class="labels"><label for="username">{{ 'account.pseudo'|trans }}:</label> <label for="password">{{ 'account.password'|trans }}:</label></p>
 	<p class="inputs">
-	<input type="text" name="username" id="username" /> 
-	<input type="password" name="password" id="password" />
-	<input type="submit" name="login" value="" class="login" />
+	<input type="text" name="_username" id="username" /> 
+	<input type="password" name="_password" id="password" />
+	<input type="submit" id="_login" name="_login" value="" class="login" />
 	</p>
 	<span class="forgot-psw"><a href="#">{{ 'account.forgot.password'|trans }}</a></span>
 </form>

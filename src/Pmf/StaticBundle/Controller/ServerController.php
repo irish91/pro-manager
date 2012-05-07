@@ -35,6 +35,7 @@ class ServerController extends Controller
      * renders home page
      */
     public function homepageAction(){
+    	
     	return $this->render('PmfStaticBundle:Page:home.html.twig');
     }
 }
