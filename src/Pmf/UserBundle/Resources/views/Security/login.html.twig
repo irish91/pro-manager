@@ -3,29 +3,38 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('assets/pmfuser/css/login.css') }}" />
 
-{% if error %}
-    <div>{{ error|trans({}, 'FOSUserBundle') }}</div>
-{% endif %}
+	{% if app.user %}
+		<div style="width:80%;margin:0 auto 0 auto;padding-top:60px;color:#efefef">
+		<p>You are already connected. Please <a style="color:yellow" href="{{ path('_security_logout') }}">log out</a> first.</p>
+		</div>
+	{% else %}
 
-<form action="{{ path("fos_user_security_check") }}" method="post">
+		{% if error %}
+    	<div>{{ error|trans({}, 'FOSUserBundle') }}</div>
+		{% endif %}
 
-	<input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+		<form action="{{ path("fos_user_security_check") }}" method="post">
+		
+			<input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+			
+			<p class="labels"><label for="username">{{ 'account.pseudo'|trans }}:</label> <label for="password">{{ 'account.password'|trans }}:</label></p>
+			<p class="inputs">
+			<input type="text" name="_username" id="username" /> 
+			<input type="password" name="_password" id="password" />
+			<input type="submit" id="_login" name="_login" value="" class="login" />
+			</p>
+			<span class="forgot-psw"><a href="#">{{ 'account.forgot.password'|trans }}</a></span>
+		</form>
+		
+		<p class="buttons">
+		<button class="fb-connect"></button>
+		<br />Or<br />
+		<button class="fb-register"></button>
+		</p>
+		
+		<p class="new">{{ 'account.noaccount'|trans }}</p>
+		<p><button class="register">{{ 'account.register_alt'|trans }}</button></p>
+
+	{% endif %}
 	
-	<p class="labels"><label for="username">{{ 'account.pseudo'|trans }}:</label> <label for="password">{{ 'account.password'|trans }}:</label></p>
-	<p class="inputs">
-	<input type="text" name="_username" id="username" /> 
-	<input type="password" name="_password" id="password" />
-	<input type="submit" id="_login" name="_login" value="" class="login" />
-	</p>
-	<span class="forgot-psw"><a href="#">{{ 'account.forgot.password'|trans }}</a></span>
-</form>
-
-<p class="buttons">
-<button class="fb-connect"></button>
-<br />Or<br />
-<button class="fb-register"></button>
-</p>
-
-<p class="new">{{ 'account.noaccount'|trans }}</p>
-<p><button class="register">{{ 'account.register_alt'|trans }}</button></p>
 {% endblock %}
