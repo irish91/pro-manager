@@ -146,6 +146,20 @@ button.fb-register:hover{
 	background-image:url(../images/buttons/btn-fb-register-hover.png);
 }
 
+form input.login{
+	border:0;
+	background-color:transparent;
+	background-image:url(../images/icons/btn-power.png);
+	background-repeat:no-repeat;
+	width:45px;
+	height:45px;
+	cursor:pointer;
+}
+	
+form input.login:hover{
+	background-image:url(../images/icons/btn-power-hover.png);
+}
+
 /*---------------------------------------------
 	 Global Tags
   ---------------------------------------------
