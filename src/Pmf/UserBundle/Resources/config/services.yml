@@ -1,11 +1,12 @@
 parameters:
 #    pmf_user.example.class: Pmf\UserBundle\Example
+     pmf_user.login_success_handler.class: Pmf\UserBundle\Service\LoginSuccessHandler
 
 services:
 #    pmf_user.example:
 #        class: %pmf_user.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]
-
+  
     my.facebook.user:
         class: Pmf\UserBundle\Security\User\Provider\FacebookProvider
         arguments:
@@ -19,3 +20,9 @@ services:
         arguments: [%fos_user.model.user.class%]
         tags:
             - { name: form.type, alias: pmf_user_registration }
+    
+    login_success_handler:
+        class: %pmf_user.login_success_handler.class%
+        arguments: [@router, @security.context]
+        tags:
+            - { name: 'monolog.logger' channel: 'security' }

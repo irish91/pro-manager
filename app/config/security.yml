@@ -12,6 +12,11 @@ security:
               form_login:
                   provider: fos_userbundle
                   csrf_provider: form.csrf_provider
+                  login_path:     /login
+                  use_forward:    false
+                  success_handler: login_success_handler
+                  check_path:     /login_check
+                  failure_path:   null
               logout:       true
               anonymous:    true
   
