@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('assets/pmfuser/css/login.css') }}" />
 
 	{% if app.user %}
-		<div style="width:80%;margin:0 auto 0 auto;padding-top:60px;color:#efefef">
+		<div style="width:80%;margin:0 auto 0 auto;position:relative;top:60px;color:#efefef">
 		<p>You are already connected. Please <a style="color:yellow" href="{{ path('_security_logout') }}">log out</a> first.</p>
 		</div>
 	{% else %}

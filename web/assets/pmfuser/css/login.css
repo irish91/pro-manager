@@ -7,9 +7,9 @@ html{
 	height:237px;
 	margin:0 auto 0 auto;
 	position:relative;
-	margin-top:10em;
-	margin-bottom:10em;
-	background-image:url(../images/red-container.png)
+	top:10em;
+	background-image:url(../images/red-container.png);
+	background-repeat:no-repeat;
 }
 
 #content form{

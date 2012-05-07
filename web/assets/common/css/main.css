@@ -24,6 +24,7 @@ body{
 #global-container{
 	position:relative;
 	width:780px;
+	min-height:500px;
 	margin:0 auto 0 auto;
 	overflow:visible;
 }
@@ -186,5 +187,6 @@ button{
 	color:#EFEFEF;
 	margin: 0 auto 0 auto;
 	padding-bottom:100px;
+	margin-top:50px;
 	clear:both;
 }
