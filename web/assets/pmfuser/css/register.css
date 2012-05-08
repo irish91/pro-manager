@@ -120,6 +120,8 @@ form input[type=text], form input[type=password], form input[type=email]{
 	height:241px;
 	background-image:url(../images/registration/boxes/register.png);
 	background-repeat:no-repeat;
+	margin-top:-10px;
+	margin-left:-5px;
 }
 
 #box-registered h1, #box-registered p{
@@ -138,4 +140,8 @@ form input[type=text], form input[type=password], form input[type=email]{
 	padding-left:1em;
 	font-size:60%;
 	margin-bottom:1em;
+}
+
+#fancybox-outer{
+	background:none;
 }
