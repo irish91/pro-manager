@@ -6,6 +6,11 @@ $(document).ready(function(){
 		return false;
 	});
 	
-	$('input#register').fancybox({ 'autoDimensions': true, 'padding': -5, 'margin': 0 });
+	$('input#register').fancybox({
+		'autoDimensions': true,
+		'padding': -5,
+		'margin': 0,
+		'hideOnOverlayClick': false,
+	});
 	
 });
