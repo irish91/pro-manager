@@ -120,6 +120,7 @@ form input[type=text], form input[type=password], form input[type=email]{
 	height:241px;
 	background-image:url(../images/registration/boxes/register.png);
 	background-repeat:no-repeat;
+	overflow:hidden;
 }
 
 #box-registered h1, #box-registered p{
