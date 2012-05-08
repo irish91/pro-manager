@@ -112,3 +112,30 @@ form input[type=text], form input[type=password], form input[type=email]{
 	
 	background-color:#EFEFEF
 }
+
+
+/* FANCYBOX */
+#box-registered{
+	width:496px;
+	height:241px;
+	background-image:url(../images/registration/boxes/register.png);
+	background-repeat:no-repeat;
+}
+
+#box-registered h1, #box-registered p{
+	margin:0;
+	padding:0;
+}
+
+#box-registered h1{
+	color:#FFF;
+	text-align:center;
+	padding-top:15px;
+	margin-bottom:30px;
+}
+
+#box-registered p{
+	padding-left:1em;
+	font-size:60%;
+	margin-bottom:1em;
+}
