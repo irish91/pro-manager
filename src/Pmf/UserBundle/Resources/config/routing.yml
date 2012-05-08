@@ -1,3 +1,7 @@
+registration_register:
+    pattern: /register/
+    defaults: { _controller: PmfUserBundle:Registration:register }
+
 registration_create_team:
     pattern: /register/create-team
     defaults: { _controller: PmfUserBundle:Registration:createTeam }

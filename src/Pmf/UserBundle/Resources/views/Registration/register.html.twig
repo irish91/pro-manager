@@ -18,7 +18,7 @@
 		
 		<h1>-CREEZ VOTRE PROFIL-</h1>
 		
-		<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
+		<form id="registration" action="{{ path('registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
 			
 			{{ form_errors(form) }}
 			
