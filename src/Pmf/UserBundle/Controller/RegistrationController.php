@@ -51,7 +51,7 @@ class RegistrationController extends BaseController
 						'user' => $user,
 				);
 				
-				return json_encode($data); 
+				return new Response(json_encode($data)); 
 				
 			} else {
 				$url = $this->container->get('router')->generate('fos_user_registration_check_email');
