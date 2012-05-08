@@ -2,6 +2,7 @@
 
 {% block content %}
 <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('assets/pmfuser/css/register.css') }}" />
+<script src="{{ asset('assets/pmfuser/js/registration.js') }}" type="text/javascript"></script>
 
 <div id="registration-p1">
 	<div id="content">
@@ -24,11 +25,28 @@
 			{{ form_widget(form) }}
 			
 			<div style="text-align:center;padding-top:1em;">
-				<input type="submit" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}" />
+				<input type="submit" id="register" href="#box-registered" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}" />
 			</div>
 			
 		</form>
 	
 	</div>	
 </div>
+	
+
+<div style="display:none">
+	<div id="box-registered">
+	<h1>LE BORD DE DIRECTION</h1>
+	
+	<p>Le bord de direction a été impréssionné par votre profil et a décidé d'accepter votre candidateur.<br />
+	Un courrier de bienvenue vient de vous être envoyé par email à l'instant.<br />
+	Veuillez confirmer votre email pour entâmer la création de votre équipe et commencer votre carrière de manager.</p>
+	
+	<p>Bonne chance !</p>
+	
+	<p>La direction.</p>
+	
+	</div>
+</div>
 {% endblock %}
+
