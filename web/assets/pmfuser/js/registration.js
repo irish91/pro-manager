@@ -4,12 +4,12 @@ $(document).ready(function(){
 
 	
 	// enable fancybox
-	/*$('input#register').fancybox({
+	$('a#box-success-trigger').fancybox({
 		'autoDimensions': true,
 		'padding': -5,
 		'margin': 0,
 		'hideOnOverlayClick': false,
-	});*/
+	});
 	
 	// ajax call for registration
 	$('form#registration').ajaxForm({ 
@@ -21,7 +21,10 @@ $(document).ready(function(){
 });
 
 function processJson(data) {
-    alert(''); 
+    if(data.success == true)
+    	 $("a#box-success-trigger").trigger('click');
+    else
+    	alert('error');
 }
 
 function errorJson(xhr) {

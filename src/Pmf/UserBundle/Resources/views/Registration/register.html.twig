@@ -25,7 +25,7 @@
 			{{ form_widget(form) }}
 			
 			<div style="text-align:center;padding-top:1em;">
-				<input type="submit" id="register" href="#box-registered" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}" />
+				<input type="submit" id="register" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}" />
 			</div>
 			
 		</form>
@@ -33,7 +33,7 @@
 	</div>	
 </div>
 	
-
+<a style="display:none;" id="box-success-trigger" href="#box-registered"></a>
 <div style="display:none">
 	<div id="box-registered">
 	<h1>LE BORD DE DIRECTION</h1>
