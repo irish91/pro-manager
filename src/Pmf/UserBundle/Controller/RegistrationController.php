@@ -13,6 +13,9 @@ use Symfony\Component\HttpFoundation\Response;
 
 use FOS\UserBundle\Controller\RegistrationController as BaseController;
 
+use Pmf\UserBundle\Form\Type\CreateTeamFormType;
+use Pmf\UserBundle\Entity\Team;
+
 /**
  *
  * @author Tobias Hourst <tobiashourst@elcyone.com>
@@ -71,7 +74,41 @@ class RegistrationController extends BaseController
 	}
 	
 	public function createTeamAction(){
-		return $this->container->get('templating')->renderResponse('PmfUserBundle:Registration:create-team.html.twig');
+		
+		// get user object and check if user is connected
+		$user = $this->container->get('security.context')->getToken()->getUser();
+		if (!is_object($user) || !$user instanceof UserInterface) {
+			throw new AccessDeniedException(
+					'You need to be connected to access this page.');
+		}
+		
+		$team = new Team();
+		
+		$form = $this->container->get('form.factory')->create(new CreateTeamFormType(), $team);
+		
+		if ($this->container->get('request')->getMethod() == 'POST'){
+			$form->bindRequest($request);
+			
+			if ($form->isValid()) {
+				$em = $this->getDoctrine()->getEntityManager();
+				
+				$team->setUser();
+				
+				$em->persist($team);
+				$em->flush();
+			
+				return $this->redirect($this->generateUrl('task_success'));
+			}
+		}
+		
+		return $this->container->get('templating')->renderResponse('PmfUserBundle:Registration:create-team.html.twig', array(
+				'form' => $form->createView(),
+		));
+	}
+	
+	public function signContractAction(){
+		
+		
 	}
 	
 }

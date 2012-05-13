@@ -5,3 +5,7 @@ registration_register:
 registration_create_team:
     pattern: /register/create-team
     defaults: { _controller: PmfUserBundle:Registration:createTeam }
+    
+registration_sign_contract:
+    pattern: /register/sign-contract
+    defaults: { _controller: PmfUserBundle:Registration:signContract }
