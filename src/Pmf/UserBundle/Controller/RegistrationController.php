@@ -36,16 +36,6 @@ class RegistrationController extends BaseController
 		$process = $formHandler->process($confirmationEnabled);
 		if ($process) {
 			$user = $form->getData();
-	
-			/*if ($confirmationEnabled) {
-				$this->container->get('session')->set('fos_user_send_confirmation_email/email', $user->getEmail());
-				$route = 'fos_user_registration_check_email';
-			} else {
-				$this->authenticateUser($user);
-				$route = 'fos_user_registration_confirmed';
-			}
-	
-			$this->setFlash('fos_user_success', 'registration.flash.user_created');*/
 			
 			if($this->container->get('request')->isXmlHttpRequest()){
 				
@@ -67,10 +57,11 @@ class RegistrationController extends BaseController
 		}
 		
 	
-		return $this->container->get('templating')->renderResponse('FOSUserBundle:Registration:register.html.'.$this->getEngine(), array(
-				'form' => $form->createView(),
-				'theme' => $this->container->getParameter('fos_user.template.theme'),
-		));
+		return $this->container->get('templating')
+				->renderResponse('FOSUserBundle:Registration:register.html.'.$this->getEngine(), array(
+					'form' => $form->createView(),
+					'theme' => $this->container->getParameter('fos_user.template.theme'),
+				));
 	}
 	
 	public function createTeamAction(){
@@ -87,12 +78,12 @@ class RegistrationController extends BaseController
 		$form = $this->container->get('form.factory')->create(new CreateTeamFormType(), $team);
 		
 		if ($this->container->get('request')->getMethod() == 'POST'){
-			$form->bindRequest($request);
+			$form->bindRequest($this->container->get('request'));
 			
 			if ($form->isValid()) {
-				$em = $this->getDoctrine()->getEntityManager();
+				$em = $this->container->get('doctrine')->getEntityManager();
 				
-				$team->setUser();
+				$team->setUser($user);
 				
 				$em->persist($team);
 				$em->flush();
@@ -102,13 +93,16 @@ class RegistrationController extends BaseController
 			}
 		}
 		
-		return $this->container->get('templating')->renderResponse('PmfUserBundle:Registration:create-team.html.twig', array(
-				'form' => $form->createView(),
-		));
+		return $this->container->get('templating')
+				->renderResponse('PmfUserBundle:Registration:create-team.html.twig', array(
+						'form' => $form->createView(),
+				));
 	}
 	
 	public function signContractAction(){
-		return $this->container->get('templating')->renderResponse('PmfUserBundle:Registration:sign-contract.html.twig');
+		
+		return $this->container->get('templating')
+				->renderResponse('PmfUserBundle:Registration:sign-contract.html.twig');
 	}
 	
 }
