@@ -71,7 +71,7 @@ class RegistrationController extends BaseController
 	}
 	
 	public function createTeamAction(){
-		return $this->render('PmfUserBundle:Registration:create-team.html.twig');
+		return $this->container->get('templating')->renderResponse('PmfUserBundle:Registration:create-team.html.twig');
 	}
 	
 }
