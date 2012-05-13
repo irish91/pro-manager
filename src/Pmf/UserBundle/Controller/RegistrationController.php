@@ -108,8 +108,7 @@ class RegistrationController extends BaseController
 	}
 	
 	public function signContractAction(){
-		
-		
+		return $this->container->get('templating')->renderResponse('PmfUserBundle:Registration:sign-contract.html.twig');
 	}
 	
 }
