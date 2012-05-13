@@ -25,7 +25,7 @@ use Pmf\UserBundle\Entity\Team;
 class RegistrationController extends BaseController
 {
     /**
-     * Ovverides registerAction
+     * Overrides registerAction
      */
 	public function registerAction()
 	{
