@@ -15,9 +15,15 @@
 			<img class="picture" src="{{ asset('resources/images/profile/blank.png') }}">
 		</div>
 		
-		<h1>-CREEZ VOTRE TEAM-</h1>
+		<h1>-CREEZ VOTRE EQUIPE-</h1>
 		
-		
+		<form action="{{ path('registration_create_team') }}" {{ form_enctype(form) }} method="POST"
+			
+			{{ form_widget(form) }}
+			
+			<div style="text-align:center;padding-top:1em;">
+				<input type="submit" id="create-team" value="Créez l'équipe" />
+			</div>
 			
 		</form>
 	

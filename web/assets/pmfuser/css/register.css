@@ -144,3 +144,12 @@ form input[type=text], form input[type=password], form input[type=email]{
 #fancybox-outer{
 	background:none;
 }
+
+
+#contract{
+	width:90%;
+	height:350px;
+	overflow:auto;
+	margin:0 auto 0 auto;
+	background-color:#EFEFEF;
+}

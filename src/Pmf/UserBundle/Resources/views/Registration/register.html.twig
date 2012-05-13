@@ -20,8 +20,6 @@
 		
 		<form id="registration" action="{{ path('registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
 			
-			{{ form_errors(form) }}
-			
 			{{ form_widget(form) }}
 			
 			<div style="text-align:center;padding-top:1em;">
