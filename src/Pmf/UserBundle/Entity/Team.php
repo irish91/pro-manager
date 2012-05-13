@@ -39,6 +39,11 @@ class Team
      */
     protected $style;
     
+    /**
+     * @ORM\OneToOne(targetEntity="Pmf\UserBundle\Entity\User", inversedBy="team");
+     */
+    protected $user;
+    
 
     /**
      * Get id
@@ -128,5 +133,25 @@ class Team
     public function getStyle()
     {
         return $this->style;
+    }
+
+    /**
+     * Set user
+     *
+     * @param Pmf\UserBundle\Entity\User $user
+     */
+    public function setUser(\Pmf\UserBundle\Entity\User $user)
+    {
+        $this->user = $user;
+    }
+
+    /**
+     * Get user
+     *
+     * @return Pmf\UserBundle\Entity\User 
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }

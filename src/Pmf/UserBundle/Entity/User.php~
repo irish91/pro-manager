@@ -59,6 +59,11 @@ class User extends BaseUser
      */
     protected $facebookID;
     
+    /**
+     * @ORM\OneToOne(targetEntity="Pmf\UserBundle\Entity\Team", mappedBy="user", cascade={"all"});
+     */
+    protected $team;
+    
     public function serialize()
     {
     	return serialize(array($this->facebookID, parent::serialize()));

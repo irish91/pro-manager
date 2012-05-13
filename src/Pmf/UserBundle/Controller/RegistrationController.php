@@ -25,7 +25,7 @@ use Pmf\UserBundle\Entity\Team;
 class RegistrationController extends BaseController
 {
     /**
-     * Ovverides registerAction
+     * Overrides registerAction
      */
 	public function registerAction()
 	{
@@ -88,7 +88,7 @@ class RegistrationController extends BaseController
 				$em->persist($team);
 				$em->flush();
 				
-				$url = $this->container->get('router')->generate('register_sign_contract');
+				$url = $this->container->get('router')->generate('registration_sign_contract');
 				return new RedirectResponse($url);
 			}
 		}

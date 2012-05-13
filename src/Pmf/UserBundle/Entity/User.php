@@ -59,6 +59,11 @@ class User extends BaseUser
      */
     protected $facebookID;
     
+    /**
+     * @ORM\OneToOne(targetEntity="Pmf\UserBundle\Entity\Team", mappedBy="user", cascade={"all"});
+     */
+    protected $team;
+    
     public function serialize()
     {
     	return serialize(array($this->facebookID, parent::serialize()));
@@ -264,5 +269,25 @@ class User extends BaseUser
     public function getBirthday()
     {
         return $this->birthday;
+    }
+
+    /**
+     * Set team
+     *
+     * @param Pmf\UserBundle\Entity\Team $team
+     */
+    public function setTeam(\Pmf\UserBundle\Entity\Team $team)
+    {
+        $this->team = $team;
+    }
+
+    /**
+     * Get team
+     *
+     * @return Pmf\UserBundle\Entity\Team 
+     */
+    public function getTeam()
+    {
+        return $this->team;
     }
 }

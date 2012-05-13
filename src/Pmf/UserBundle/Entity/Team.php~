@@ -39,4 +39,99 @@ class Team
      */
     protected $style;
     
+    /**
+     * @ORM\OneToOne(targetEntity="Pmf\UserBundle\Entity\User", inversedBy="team");
+     */
+    protected $user;
+    
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set ABV
+     *
+     * @param string $aBV
+     */
+    public function setABV($aBV)
+    {
+        $this->ABV = $aBV;
+    }
+
+    /**
+     * Get ABV
+     *
+     * @return string 
+     */
+    public function getABV()
+    {
+        return $this->ABV;
+    }
+
+    /**
+     * Set gender
+     *
+     * @param string $gender
+     */
+    public function setGender($gender)
+    {
+        $this->gender = $gender;
+    }
+
+    /**
+     * Get gender
+     *
+     * @return string 
+     */
+    public function getGender()
+    {
+        return $this->gender;
+    }
+
+    /**
+     * Set style
+     *
+     * @param string $style
+     */
+    public function setStyle($style)
+    {
+        $this->style = $style;
+    }
+
+    /**
+     * Get style
+     *
+     * @return string 
+     */
+    public function getStyle()
+    {
+        return $this->style;
+    }
 }
