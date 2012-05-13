@@ -82,8 +82,8 @@
 	
 	#header .auth-top .login .auth{
 		margin:0;
-		position:absolute;
-		top:20px;
+		padding-left:160px;
+		padding-top:10px;
 	}
 	
 	/* hack firefox */
@@ -91,22 +91,23 @@
 		top:10px;
 	}
 	
+	#header .auth-top .login form input{
+		margin-left:1em;
+	}
+	
 	#header .auth-top .login form input.username{
-		position:relative;
-		left:170px;
+
 	}
 	
 	#header .auth-top .login form input.password{
-		position:relative;
-		left:170px;
+
 		background-color:#00000;
 	}
 	
 	#header .auth-top .login form input.login{
-		position:relative;
-		top:-17px;
-		right:-182px;
+		padding-top:-5px;
 	}
+	
 	#header  .fb-root{
 		position:relative;
 		top:-17px;
