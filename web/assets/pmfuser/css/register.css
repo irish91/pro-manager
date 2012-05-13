@@ -147,7 +147,9 @@ form input[type=text], form input[type=password], form input[type=email]{
 
 
 #contract{
-	width:80%;
-	height:400px;
+	width:90%;
+	height:350px;
 	overflow:auto;
+	margin:0 auto 0 auto;
+	background-color:#EFEFEF;
 }
