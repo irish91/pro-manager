@@ -21,6 +21,7 @@ use Pmf\UserBundle\Entity\Team;
  * @author Tobias Hourst <tobiashourst@elcyone.com>
  * 
  * - extends FOSUserBundle RegistrationController
+ * 
  */
 class RegistrationController extends BaseController
 {
