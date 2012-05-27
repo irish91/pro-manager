@@ -7,7 +7,6 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
- * -- This is a test commit using Github GUI for windows --
  * @author Tobias Hourst <tobiashourst@elcyone.com>
  */
 class ServerController extends Controller
