@@ -147,7 +147,7 @@ form input[type=text], form input[type=password], form input[type=email]{
 }
 
 #box-registered div.middle p{
-	padding-left:1em;
+	margin-left:1em;
 	font-size:75%;
 	margin-bottom:1em;
 }
