@@ -103,6 +103,10 @@ form .boxes{
 	width: 1em;
 }
 
+form input label{
+	float:none;
+	width:auto;
+}
 
 form input[type=text], form input[type=password], form input[type=email]{
 	border:0;

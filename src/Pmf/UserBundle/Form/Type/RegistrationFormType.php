@@ -42,6 +42,7 @@ class RegistrationFormType extends BaseType
     		'choices'   => array('male' => 'Homme', 'female' => 'Femme'),
         	'label'		=> 'Genre',
     		'required'  => true,
+        	'expanded' => 'true',
 		));
         
         $builder->add('birthday', 'birthday', array(
@@ -68,7 +69,8 @@ class RegistrationFormType extends BaseType
         								'total-football'=> 'Total Football',
         								'counterattack'	 => 'Contre-Attaque',
          							),
-        		'label' => 'Philosophie'
+        		'label' => 'Philosophie',
+        		'expanded' => 'true',
         ));
         
         
