@@ -116,11 +116,7 @@ form input[type=text], form input[type=password], form input[type=email]{
 
 /* FANCYBOX */
 #box-registered{
-	width:496px;
-	height:241px;
-	background-image:url(../images/registration/boxes/register.png);
-	background-repeat:no-repeat;
-	overflow:hidden;
+	width:486px;
 }
 
 #box-registered h1, #box-registered p{
@@ -128,14 +124,29 @@ form input[type=text], form input[type=password], form input[type=email]{
 	padding:0;
 }
 
-#box-registered h1{
-	color:#FFF;
-	text-align:center;
-	padding-top:16px;
-	margin-bottom:20px;
+#box-registered div.top{
+	background-image:url(../images/registration/boxes/top-register.png);
+	background-repeat:no-repeat;
 }
 
-#box-registered p{
+#box-registered div.top h1{
+	color:#FFF;
+	text-align:center;
+	padding-top:7px;
+	padding-bottom:7px;
+}
+
+#box-registered div.middle{
+	background-color:#FFF;
+	padding-top:1em;
+	padding-bottom:1em;
+	-webkit-border-radius: 0px 0px 10px 10px;
+	border-radius: 0px 0px 10px 10px;
+    -webkit-box-shadow: inset 0px 0px 60px 7px rgba(0, 0, 0, 0.21);
+    box-shadow: inset 0px 0px 60px 7px rgba(0, 0, 0, 0.21);
+}
+
+#box-registered div.middle p{
 	padding-left:1em;
 	font-size:75%;
 	margin-bottom:1em;

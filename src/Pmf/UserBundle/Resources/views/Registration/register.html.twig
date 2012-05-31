@@ -24,7 +24,11 @@
 			
 			<div style="text-align:center;padding-top:1em;">
 				<input type="submit" id="register" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}" />
+				
+				<!-- TEST - TO REMOVE -->
+				<button onclick="$('a#box-success-trigger').trigger('click');">Test: Trigger box without processing data</button>
 			</div>
+			
 			
 		</form>
 	
@@ -34,17 +38,21 @@
 <a style="display:none;" id="box-success-trigger" href="#box-registered"></a>
 <div style="display:none">
 	<div id="box-registered">
-	<h1>LE BORD DE DIRECTION</h1>
+		<div class="top">
+			<h1>LE BORD DE DIRECTION</h1>
+		</div>
+		<div class="middle">
+			<p>Le bord de direction a été impréssionné par votre profil et a décidé d'accepter votre candidature.<br />
+			Un courrier de bienvenue vient de vous être envoyé par email à l'instant.<br />
+			<b>Veuillez confirmer votre email</b> pour entâmer la création de votre équipe et commencer votre carrière de manager.</p>
 	
-	<p>Le bord de direction a été impréssionné par votre profil et a décidé d'accepter votre candidature.<br />
-	Un courrier de bienvenue vient de vous être envoyé par email à l'instant.<br />
-	<b>Veuillez confirmer votre email</b> pour entâmer la création de votre équipe et commencer votre carrière de manager.</p>
+			<p>Bonne chance !</p>
 	
-	<p>Bonne chance !</p>
-	
-	<p>La direction.</p>
-	
-	<p style="text-align:center;margin-top:-15px;"><a href="#" onclick="$.fancybox.close();return false;"><img src="{{ asset('assets/common/images/buttons/btn-ok.png') }}" alt="ok" /></a></p>
+			<p>La direction.</p>
+			
+			<p style="text-align:center;margin-top:-15px;"><a href="#" onclick="$.fancybox.close();return false;"><img src="{{ asset('assets/common/images/buttons/btn-ok.png') }}" alt="ok" /></a></p>
+			
+		</div>
 	
 	</div>
 </div>
