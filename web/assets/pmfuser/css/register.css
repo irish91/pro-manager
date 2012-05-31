@@ -117,6 +117,7 @@ form input[type=text], form input[type=password], form input[type=email]{
 /* FANCYBOX */
 #box-registered{
 	width:486px;
+	overflow:hidden;
 }
 
 #box-registered h1, #box-registered p{
