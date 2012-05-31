@@ -19,9 +19,56 @@
 		<h1>-CREEZ VOTRE PROFIL-</h1>
 		
 		<form id="registration" action="{{ path('registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
-			
-			{{ form_widget(form) }}
-			
+
+			<div>
+				{{ form_label(form.username) }}
+	    		{{ form_widget(form.username) }}
+	    	</div>
+	    	
+	    	<div>
+	    		{{ form_label(form.lastname) }}
+	    		{{ form_widget(form.lastname) }}
+	    	</div>
+	    	
+	    	<div>
+	    		{{ form_label(form.firstname) }}
+	    		{{ form_widget(form.firstname) }}
+	    	</div>
+	    	
+	    	<div>
+	    		{{ form_label(form.email) }}
+	    		{{ form_widget(form.email) }}
+	    	</div>
+	    	
+	    	<div>
+	    		{{ form_widget(form.plainPassword) }}
+	    	</div>
+	    	
+	    	<div>
+	    		{{ form_label(form.gender) }}
+	    		{{ form_widget(form.gender) }}
+	    	</div>
+	    	
+	    	<div>
+	    		{{ form_label(form.birthday) }}
+	    		{{ form_widget(form.birthday) }}
+	    	</div>
+	    	
+	    	<div>
+	    		{{ form_label(form.country) }}
+	    		{{ form_widget(form.country) }}
+	    	</div>
+	    	
+	    	<div>
+	    		{{ form_label(form.language) }}
+	    		{{ form_widget(form.language) }}
+	    	</div>
+	    	
+	    	<div>
+	    		{{ form_label(form.philosophy) }}
+	    		{{ form_widget(form.philosophy) }}
+			</div>
+		
 			<div style="text-align:center;padding-top:1em;">
 				<input type="submit" id="register" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}" />
 				
