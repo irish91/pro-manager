@@ -3,3 +3,15 @@ app/logs/*
 vendor
 app/config/parameters.ini
 
+
+vendor/bundles/JMS/TranslationBundle
+
+vendor/bundles/Knp/Bundle/MenuBundle
+
+vendor/bundles/JMS/TranslationBundle
+
+vendor/bundles/FOS/FacebookBundle
+
+vendor/bundles/JMS/TranslationBundle
+
+vendor/KnpMenu
