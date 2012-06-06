@@ -1,1 +1,21 @@
-<p>Test</p>
+{% block subject %}
+	Bienvenue chez Pro Manager!
+{% endblock %}
+
+{% block body_html %}
+	<p>Bonjour <br />
+	Nous sommes ravi de vous accueillir sur Pro Manager. <br />
+	Bienvenue!
+	</p>
+	
+	<p>Le bord de direction vous annonce que votre candidature a été accepté.<br />
+	Comme cadeau de bienvenue, le bord de direction vous offre le "Pack Standard", qui vous donne de nombreux avantages pour bien débuter votre carrière sur Pro Manager.
+	</p>
+	
+	<p>Vous pouvez dès à présent vous connecter à Pro Manager et débuter votre carrière de manager en commencant par créer votre équipe.</p>
+	
+	<p><a href="{{ url('registration_create_team') }}">Créer mon équipe.</a></p>
+	
+	<p>Bonne Chance,</p>
+	
+{% endblock %}

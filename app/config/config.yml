@@ -70,6 +70,11 @@ fos_user:
         confirmation:
             enabled:    true
             template:   PmfUserBundle:Registration:email.txt.twig
+            from_email:
+                address:        noreply@pro-manager.com
+                sender_name:    Pro Manager
+    service:
+        mailer: fos_user.mailer.twig_swift
     
 fos_facebook:
     file:   %kernel.root_dir%/../vendor/facebook/src/base_facebook.php
