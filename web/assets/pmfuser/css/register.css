@@ -73,9 +73,13 @@ form label{
 	width: 40%;
 }
 
-form input, textarea{
+form input, form textarea{
 	width: 40%;
 	margin-bottom: 5px;
+}
+
+form input[type=email]{
+	width:41%;
 }
 
 form textarea{
