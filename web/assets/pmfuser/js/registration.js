@@ -24,7 +24,7 @@ function processJson(data) {
     if(data.success == true)
     	 $("a#box-success-trigger").trigger('click');
     else
-    	alert('error');
+    	alert('errors:' + data.errors);
 }
 
 function errorJson(xhr) {

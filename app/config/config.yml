@@ -67,9 +67,9 @@ fos_user:
     registration:
         form:
             type: pmf_user_registration
-        #confirmation:
-        #    enabled:    true
-        #    template:   PmfUserBundle:Registration:email.txt.twig
+        confirmation:
+            enabled:    true
+            template:   PmfUserBundle:Registration:email.txt.twig
     
 fos_facebook:
     file:   %kernel.root_dir%/../vendor/facebook/src/base_facebook.php

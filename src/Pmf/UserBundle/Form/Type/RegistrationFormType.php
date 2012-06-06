@@ -17,25 +17,30 @@ class RegistrationFormType extends BaseType
     public function buildForm(FormBuilder $builder, array $options)
     {
         $builder->add('username', 'text', array(
-        	'label' => 'Pseudo'		
+        	'label' => 'Pseudo',
+        	'error_bubbling' => true,
         ));
         
         $builder->add('lastname', 'text', array(
-        		'label' => 'Nom'
+        		'label' => 'Nom',
+        		'error_bubbling' => true,
         ));
         
         $builder->add('firstname', 'text', array(
-        		'label' => 'Prénom'
+        		'label' => 'Prénom',
+        		'error_bubbling' => true,
         ));
         
         $builder->add('email', 'email', array(
-        		'label' => 'Email'
+        		'label' => 'Email',
+        		'error_bubbling' => true,
         ));
         
         $builder->add('plainPassword', 'repeated', array(
         		'type' => 'password',
 			    'invalid_message' => 'The password fields must match.',
 			    'options' => array('label' => 'Mot de Passe'),
+        		'error_bubbling' => true,
         ));
         
         $builder->add('gender', 'choice', array(
@@ -43,25 +48,28 @@ class RegistrationFormType extends BaseType
         	'label'		=> 'Genre',
     		'required'  => true,
         	'expanded' => 'true',
+        	'error_bubbling' => true,
 		));
         
         $builder->add('birthday', 'birthday', array(
-        		//'widget' => 'single_text',
-        		'label' => 'Date de naissance',
-        		'format' => 'dd-MM-yyyy',
+        	'label' => 'Date de naissance',
+        	'format' => 'dd-MM-yyyy',
+        	'error_bubbling' => true,
         ));
         
         $builder->add('country', 'country', array(
-        		'label' => 'Pays',
+        	'label' => 'Pays',
+        	'error_bubbling' => true,
         ));
         
         $builder->add('language', 'choice', array(
-        		'choices'   => array('fr' => 'Français', 'en' => 'Anglais'),
-        		'label' => 'Langue'
+        	'choices'   => array('fr' => 'Français', 'en' => 'Anglais'),
+        	'label' => 'Langue',
+        	'error_bubbling' => true,
         ));
         
         $builder->add('philosophy', 'choice', array(
-        		'choices'   => array(
+        	'choices'   => array(
         								'offensive' 	=> 'Offensive', 
         								'neutral' 		=> 'Neutre',
         								'defensive' 	=> 'Défensive',
@@ -69,8 +77,9 @@ class RegistrationFormType extends BaseType
         								'total-football'=> 'Total Football',
         								'counterattack'	 => 'Contre-Attaque',
          							),
-        		'label' => 'Philosophie',
-        		'expanded' => 'true',
+        	'label' => 'Philosophie',
+        	'expanded' => 'true',
+        	'error_bubbling' => true,
         ));
         
         

@@ -21,3 +21,8 @@ monolog:
 
 assetic:
     use_controller: true
+
+swiftmailer:
+    transport: gmail
+    username:  pro.manager.dev@gmail.com
+    password:  qwertz1234

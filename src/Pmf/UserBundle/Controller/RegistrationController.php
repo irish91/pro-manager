@@ -54,7 +54,7 @@ class RegistrationController extends BaseController
 			
 		} else {
 			if($this->container->get('request')->isXmlHttpRequest())
-				return new Response(json_encode(array('success' => false)));
+				return new Response(json_encode(array('success' => false, 'errors' => $form->getErrors())));
 		}
 		
 	
