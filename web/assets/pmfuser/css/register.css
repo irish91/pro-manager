@@ -103,7 +103,19 @@ form .boxes{
 	width: 1em;
 }
 
-form input label{
+form div.radio{
+	width:250px;
+	float:left;
+	font-size:70%;
+}
+
+form input[type=radio]{
+	float:none;
+	width:auto;
+	margin-left:10px;
+}
+
+form div.radio label{
 	float:none;
 	width:auto;
 }

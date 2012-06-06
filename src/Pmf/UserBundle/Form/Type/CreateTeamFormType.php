@@ -30,7 +30,7 @@ class CreateTeamFormType extends AbstractType
         				'f' 	=> 'F',
         				'both' 	=> 'M/F',
         		),
-        		//'expanded' => 'true',
+        		'expanded' => 'true',
         ));
         
         $builder->add('style', 'choice', array(
@@ -40,7 +40,7 @@ class CreateTeamFormType extends AbstractType
         				'neutral' 		=> 'Neutre',
         				'defensive' 	=> 'Défensive',
         		),
-        		//'expanded' => 'true',
+        		'expanded' => 'true',
         ));
          
     }

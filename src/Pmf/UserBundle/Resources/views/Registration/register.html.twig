@@ -45,7 +45,8 @@
 	    	</div>
 	    	
 	    	<div>
-	    		{{ form_widget(form.gender) }}
+	    		{{ form_label(form.gender) }}
+	    		{{ form_widget(form.gender, { 'attr':{ 'class': 'radio' }}) }}
 	    	</div>
 	    	
 	    	<div>
@@ -65,7 +66,7 @@
 	    	
 	    	<div>
 	    		{{ form_label(form.philosophy) }}
-	    		{{ form_widget(form.philosophy) }}
+	    		{{ form_widget(form.philosophy, { 'attr':{ 'class': 'radio' }}) }}
 			</div>
 		
 			<div style="text-align:center;padding-top:1em;">

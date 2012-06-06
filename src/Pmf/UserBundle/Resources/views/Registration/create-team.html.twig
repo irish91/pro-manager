@@ -17,9 +17,27 @@
 		
 		<h1>-CREEZ VOTRE EQUIPE-</h1>
 		
-		<form action="{{ path('registration_create_team') }}" {{ form_enctype(form) }} method="POST"
+		<form action="{{ path('registration_create_team') }}" {{ form_enctype(form) }} method="POST">
 			
-			{{ form_widget(form) }}
+			<div>
+				{{ form_label(form.name) }}
+	    		{{ form_widget(form.name) }}
+	    	</div>
+	    	
+	    	<div>
+	    		{{ form_label(form.ABV) }}
+	    		{{ form_widget(form.ABV) }}
+	    	</div>
+	    	
+	    	<div>
+	    		{{ form_label(form.gender) }}
+	    		{{ form_widget(form.gender, { 'attr':{ 'class': 'radio' }}) }}
+	    	</div>
+	    	
+	    	<div>
+	    		{{ form_label(form.style) }}
+	    		{{ form_widget(form.style, { 'attr':{ 'class': 'radio' }}) }}
+	    	</div>
 			
 			<div style="text-align:center;padding-top:1em;">
 				<input type="submit" id="create-team" value="Créez l'équipe" />
