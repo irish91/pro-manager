@@ -26,7 +26,14 @@ use Pmf\UserBundle\Entity\Team;
 class RegistrationController extends BaseController
 {
     /**
-     * Overrides registerAction
+     * Register
+     * --------
+     * 
+     * 1rst registration page.
+     * 
+     * A verification email is sent on success.
+     * 
+     * - Overrides registerAction
      */
 	public function registerAction()
 	{
@@ -57,7 +64,6 @@ class RegistrationController extends BaseController
 				return new Response(json_encode(array('success' => false, 'errors' => $form->getErrors())));
 		}
 		
-	
 		return $this->container->get('templating')
 				->renderResponse('FOSUserBundle:Registration:register.html.'.$this->getEngine(), array(
 					'form' => $form->createView(),
@@ -89,6 +95,17 @@ class RegistrationController extends BaseController
 		return new RedirectResponse($this->container->get('router')->generate('registration_create_team'));
 	}
 	
+	/**
+	 * Create Team 
+	 * -----------
+	 * 
+	 * 2nd registration page. Only available to registered users 
+	 * who have completed the 1rst form.
+	 * 
+	 * The user is redirected to this page when verifying his email address.
+	 * 
+	 * - You must be connected to access this page
+	 */
 	public function createTeamAction(){
 		
 		// get user object and check if user is connected
@@ -124,6 +141,15 @@ class RegistrationController extends BaseController
 				));
 	}
 	
+	/**
+	 * Sign Contract
+	 * -------------
+	 * 
+	 * 3rd registration page.
+	 * 
+	 * Last step, the user must sign the contract (terms and conditions) 
+	 * in order to complete the registration process.
+	 */
 	public function signContractAction(){
 		
 		return $this->container->get('templating')
