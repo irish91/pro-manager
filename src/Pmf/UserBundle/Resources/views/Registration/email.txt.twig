@@ -3,6 +3,28 @@
 {% endblock %}
 
 {% block body_html %}
+
+<style type="text/css">
+
+div#content{
+	background-image:url({{ base_path }}/assets/pmfuser/images/registration/bg-email.png);
+	background-repeat:no-repeat;
+	width:448px;
+	height:600px;
+	overflow:auto;
+	font-size:13px;
+	font-family: "Times New Roman";
+	padding-top:40px;
+}
+
+div#content p{
+	padding-left:50px;
+	padding-right:50px;
+}
+
+</style>
+
+<div id="content">
 	<p>Bonjour <br />
 	Nous sommes ravi de vous accueillir sur Pro Manager. <br />
 	Bienvenue!
@@ -17,5 +39,6 @@
 	<p><a href="{{ confirmationUrl }}">Confirmer mon adresse email et créer mon équipe.</a></p>
 	
 	<p>Bonne Chance,</p>
-	
+</div>
+
 {% endblock %}

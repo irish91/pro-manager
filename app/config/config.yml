@@ -74,7 +74,7 @@ fos_user:
                 address:        noreply@pro-manager.com
                 sender_name:    Pro Manager
     service:
-        mailer: fos_user.mailer.twig_swift
+        mailer: fos_user.mailer.my_swift_mailer
     
 fos_facebook:
     file:   %kernel.root_dir%/../vendor/facebook/src/base_facebook.php

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pmf\MyBundle\Security\User\Provider;
+namespace Pmf\UserBundle\Security\User\Provider;
 
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
