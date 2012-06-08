@@ -10,6 +10,7 @@ use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use Symfony\Component\Security\Core\Exception\AccountStatusException;
 use FOS\UserBundle\Model\UserInterface;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 use FOS\UserBundle\Controller\RegistrationController as BaseController;
 
@@ -25,6 +26,7 @@ use Pmf\UserBundle\Entity\Team;
  */
 class RegistrationController extends BaseController
 {
+    
     /**
      * Register
      * --------
@@ -37,6 +39,14 @@ class RegistrationController extends BaseController
      */
 	public function registerAction()
 	{
+		
+		// redirect user to the game if already connected
+		$user = $this->container->get('security.context')->getToken()->getUser();
+		if (is_object($user) && $user->hasRole('ROLE_ACTIVE_USER')) {
+			// !!TEMPORARY!! MUST REDIRECT TO GAME
+			return new RedirectResponse($this->container->get('router')->generate('homepage'));
+		}
+		
 		$form = $this->container->get('fos_user.registration.form');
 		$formHandler = $this->container->get('fos_user.registration.form.handler');
 		$confirmationEnabled = $this->container->getParameter('fos_user.registration.confirmation.enabled');
@@ -164,6 +174,13 @@ class RegistrationController extends BaseController
 					'You need to be connected to access this page.');
 		}
 		
+		// redirect user to the game if already connected
+		$user = $this->container->get('security.context')->getToken()->getUser();
+		if (is_object($user) && $user->hasRole('ROLE_ACTIVE_USER')) {
+			// !!TEMPORARY!! MUST REDIRECT TO GAME
+			return new RedirectResponse($this->container->get('router')->generate('homepage'));
+		}
+		
 		$form = $this->container->get('form.factory')->createBuilder('form')
 			->add('contract', 'choice', array(
     			'choices'   => array(true => ' ', false => ' '),
@@ -189,7 +206,7 @@ class RegistrationController extends BaseController
 				$em = $this->container->get('doctrine')->getEntityManager();
 				
 				// activate user (set ACTIVE_ROLE)
-				$user->addRole('ACTIVE_ROLE');
+				$user->addRole('ROLE_ACTIVE_USER');
 				
 				if ($data['newsletter'] == true)
 					$user->setNewsletter(true);
