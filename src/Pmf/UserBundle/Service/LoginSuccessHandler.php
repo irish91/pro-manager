@@ -59,7 +59,7 @@ class LoginSuccessHandler implements AuthenticationSuccessHandlerInterface
 	    elseif ($this->security->isGranted('ROLE_ACTIVE_USER')) 
 	    { 
 	    
-	     	// !!this is temporary!!
+	     	// !!THIS IS TEMPORARY!! must redirect to game interface!
 	      	$referer_url = $request->headers->get('referer'); 
 	             
 	      	$response = new RedirectResponse($referer_url); 
