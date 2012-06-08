@@ -115,6 +115,11 @@ class RegistrationController extends BaseController
 					'You need to be connected to access this page.');
 		}
 		
+		// redirect user to "sign contract" page if the team has already been created
+		if (is_object($user->getTeam()) && $user->getTeam() != null) {
+			return new RedirectResponse($this->container->get('router')->generate('registration_sign_contract'));
+		}
+		
 		$team = new Team();
 		
 		$form = $this->container->get('form.factory')->create(new CreateTeamFormType(), $team);
