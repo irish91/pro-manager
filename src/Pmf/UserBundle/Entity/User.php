@@ -55,6 +55,11 @@ class User extends BaseUser
     protected $philosophy;
     
     /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    protected $newsletter = false;
+    
+    /**
      * @ORM\Column(type="string", length="255", nullable=true)
      */
     protected $facebookID;
@@ -289,5 +294,25 @@ class User extends BaseUser
     public function getTeam()
     {
         return $this->team;
+    }
+
+    /**
+     * Set newsletter
+     *
+     * @param boolean $newsletter
+     */
+    public function setNewsletter($newsletter)
+    {
+        $this->newsletter = $newsletter;
+    }
+
+    /**
+     * Get newsletter
+     *
+     * @return boolean 
+     */
+    public function getNewsletter()
+    {
+        return $this->newsletter;
     }
 }

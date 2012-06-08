@@ -134,4 +134,24 @@ class Team
     {
         return $this->style;
     }
+
+    /**
+     * Set user
+     *
+     * @param Pmf\UserBundle\Entity\User $user
+     */
+    public function setUser(\Pmf\UserBundle\Entity\User $user)
+    {
+        $this->user = $user;
+    }
+
+    /**
+     * Get user
+     *
+     * @return Pmf\UserBundle\Entity\User 
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
 }
