@@ -19,9 +19,21 @@
 	
 		<p style="font-size:70%">Avant de poursuivre, vous devez cértifier avoir pris connaissance du réglement de jeu et indiquer si vous souhaitez vous abonner à notre newsletter.</p>
 		
-		<form style="margin-top:0;padding-top:0;">
-		<p><label>REGLEMENT:</label> <input type="radio" name="contract" value="1" /> <input type="radio" name="contract" value="0" /></p>
-		<p><label>NEWSLETTER:</label> <input type="radio" name="newsletter" value="1" /> <input type="radio" name="contract" value="0" /></p>
+		<form style="margin-top:0;padding-top:0;" action="{{ path('registration_sign_contract') }}" {{ form_enctype(form) }} method="POST">
+			
+			<div style="margin-left:185px;font-size:65%;">
+				<span style="color:green">Oui</span> / <span style="color:red">Non</span>
+			</div>
+			
+			{{ form_label(form.contract) }}
+			{{ form_widget(form.contract) }}
+			
+			{{ form_label(form.newsletter) }}
+			{{ form_widget(form.newsletter) }}
+			
+			{{ form_rest(form) }}
+			
+			<p style="text-align:center;"><input type="submit" name="submit" value="Jouez maintenant!" /></p>
 		</form>
 		
 	</div>	

@@ -157,8 +157,55 @@ class RegistrationController extends BaseController
 	 */
 	public function signContractAction(){
 		
+		// get user object and check if user is connected
+		$user = $this->container->get('security.context')->getToken()->getUser();
+		if (!is_object($user) || !$user instanceof UserInterface) {
+			throw new AccessDeniedException(
+					'You need to be connected to access this page.');
+		}
+		
+		$form = $this->container->get('form.factory')->createBuilder('form')
+			->add('contract', 'choice', array(
+    			'choices'   => array(true => ' ', false => ' '),
+        		'label'		=> 'REGLEMENT',
+    			'required'  => true,
+        		'expanded' => true,
+			))
+			->add('newsletter', 'choice', array(
+    			'choices'   => array(true => ' ', false => ' '),
+        		'label'		=> 'NEWSLETTER',
+    			'required'  => true,
+        		'expanded' => true
+			))
+			->getForm();
+		
+		if ($this->container->get('request')->getMethod() == 'POST'){
+			$form->bindRequest($this->container->get('request'));
+			
+			$data = $form->getData();
+			
+			if ($data['contract'] == true){
+				
+				$em = $this->container->get('doctrine')->getEntityManager();
+				
+				// activate user (set ACTIVE_ROLE)
+				$user->addRole('ACTIVE_ROLE');
+				
+				if ($data['newsletter'] == true)
+					$user->setNewsletter(true);
+				
+				$em->persist($user);
+				$em->flush();
+				
+				// !!TEMPORARY!! MUST REDIRECT TO GAME
+				return new RedirectResponse($this->container->get('router')->generate('homepage'));
+			}
+		}
+		
 		return $this->container->get('templating')
-				->renderResponse('PmfUserBundle:Registration:sign-contract.html.twig');
+				->renderResponse('PmfUserBundle:Registration:sign-contract.html.twig', array(
+					'form' => $form->createView(),				
+		));
 	}
 	
 }
