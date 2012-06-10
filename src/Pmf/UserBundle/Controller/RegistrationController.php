@@ -42,7 +42,7 @@ class RegistrationController extends BaseController
 		
 		// redirect user to the game if already connected
 		$user = $this->container->get('security.context')->getToken()->getUser();
-		if (is_object($user) && $user->hasRole('ROLE_ACTIVE_USER')) {
+		if (is_object($user)) {
 			// !!TEMPORARY!! MUST REDIRECT TO GAME
 			return new RedirectResponse($this->container->get('router')->generate('homepage'));
 		}
