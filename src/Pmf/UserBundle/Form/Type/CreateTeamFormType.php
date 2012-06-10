@@ -28,7 +28,6 @@ class CreateTeamFormType extends AbstractType
         		'choices'   => array(
         				'm' 	=> 'M',
         				'f' 	=> 'F',
-        				'both' 	=> 'M/F',
         		),
         		'expanded' => 'true',
         ));
