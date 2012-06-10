@@ -55,7 +55,7 @@ $(document).ready(function(){
 	var isTimerStatsOn = false;
 	
 	// mouse in / mouse out
-	$("#statistics .bar").hover(
+	$("#statistics").hover(
 	function () {
 		
 		// show
