@@ -73,9 +73,6 @@
 		
 			<div style="text-align:center;padding-top:1em;">
 				<input type="submit" id="register" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}" />
-				
-				<!-- TEST - TO REMOVE -->
-				<button onclick="$('a#box-success-trigger').trigger('click');">Test: Trigger box without processing data</button>
 			</div>
 			
 			
@@ -86,7 +83,7 @@
 	
 <a style="display:none;" id="box-success-trigger" href="#box-registered"></a>
 <div style="display:none">
-	<div id="box-registered">
+	<div id="box-registered" class="box">
 		<div class="top">
 			<h1>LE BORD DE DIRECTION</h1>
 		</div>
@@ -100,6 +97,24 @@
 			<p>La direction.</p>
 			
 			<p style="text-align:center;margin-top:-15px;"><a href="#" onclick="$.fancybox.close(); window.location = '{{ path('homepage') }}'; return false;"><img src="{{ asset('assets/common/images/buttons/btn-ok.png') }}" alt="ok" /></a></p>
+			
+		</div>
+	
+	</div>
+</div>
+
+<a style="display:none;" id="box-error-trigger" href="#box-error"></a>
+<div style="display:none">
+	<div id="box-error" class="box">
+		<div class="top">
+			<h1>LE BORD DE DIRECTION</h1>
+		</div>
+		<div class="middle">
+			<p>Veuillez régler les erreurs suivantes:</p>
+			
+			<div class="content"></div>
+			
+			<p style="text-align:center;margin-top:-15px;"><a href="#" onclick="$.fancybox.close(); return false;"><img src="{{ asset('assets/common/images/buttons/btn-ok.png') }}" alt="ok" /></a></p>
 			
 		</div>
 	

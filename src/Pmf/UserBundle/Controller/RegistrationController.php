@@ -70,8 +70,19 @@ class RegistrationController extends BaseController
 			}
 			
 		} else {
-			if($this->container->get('request')->isXmlHttpRequest())
-				return new Response(json_encode(array('success' => false, 'errors' => $form->getErrors())));
+			if($this->container->get('request')->isXmlHttpRequest()){
+				
+				$data = array(
+					'success' => false,
+					'errorsView' => $this->container->get('templating')	
+						->render('PmfUserBundle:Registration:ajax-form-errors.html.twig', array(
+							'form' => $form->createView(),
+						)),	
+				);
+				
+				return new Response(json_encode($data));
+				
+			}
 		}
 		
 		return $this->container->get('templating')
