@@ -43,7 +43,7 @@ $(document).ready(function(){
 	});
 	
 	/**
-	 * Event: global container - hover
+	 * Event: statistics bar - hover
 	 * -----------------
 	 *  
 	 * - expand stats container on hover / shrink
@@ -55,7 +55,7 @@ $(document).ready(function(){
 	var isTimerStatsOn = false;
 	
 	// mouse in / mouse out
-	$("#global-container").hover(
+	$("#statistics .bar").hover(
 	function () {
 		
 		// show
