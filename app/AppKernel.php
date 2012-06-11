@@ -24,6 +24,7 @@ class AppKernel extends Kernel
         	new JMS\I18nRoutingBundle\JMSI18nRoutingBundle(),
         	new JMS\TranslationBundle\JMSTranslationBundle(),
         	new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+        	new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
         
             new Pmf\UserBundle\PmfUserBundle(),
         );

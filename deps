@@ -84,6 +84,10 @@
     git=git://github.com/schmittjoh/JMSTranslationBundle.git
     target=bundles/JMS/TranslationBundle
 
+[FOSJsRoutingBundle]
+    git=git://github.com/FriendsOfSymfony/FOSJsRoutingBundle.git
+    target=/bundles/FOS/JsRoutingBundle
+
 [KnpMenu]
     git=https://github.com/KnpLabs/KnpMenu.git
 
