@@ -2,6 +2,7 @@
 
 {% block content %}
 <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('assets/pmfuser/css/register.css') }}" />
+<script src="{{ asset('assets/pmfuser/js/create-team.js') }}" type="text/javascript"></script>
 
 <div id="registration-p1">
 	<div id="content">
@@ -17,7 +18,7 @@
 		
 		<h1>-CREEZ VOTRE EQUIPE-</h1>
 		
-		<form action="{{ path('registration_create_team') }}" {{ form_enctype(form) }} method="POST">
+		<form action="{{ path('registration_create_team') }}" {{ form_enctype(form) }} id="create-team" method="POST">
 			
 			<div>
 				{{ form_label(form.name) }}
@@ -48,5 +49,23 @@
 		</form>
 	
 	</div>	
+</div>
+
+<a style="display:none;" id="box-error-trigger" href="#box-error"></a>
+<div style="display:none">
+	<div id="box-error" class="box">
+		<div class="top">
+			<h1>LE BORD DE DIRECTION</h1>
+		</div>
+		<div class="middle">
+			<p>Veuillez régler les erreurs suivantes:</p>
+			
+			<div class="content"></div>
+			
+			<p style="text-align:center;"><a href="#" onclick="$.fancybox.close(); return false;"><img src="{{ asset('assets/common/images/buttons/btn-ok.png') }}" alt="ok" /></a></p>
+			
+		</div>
+	
+	</div>
 </div>
 {% endblock %}
