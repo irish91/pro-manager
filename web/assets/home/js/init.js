@@ -70,7 +70,7 @@ $(document).ready(function(){
 	function () {
 
 		// delay hide
-		timerStats = setTimeout("animStatistics(0)", 2000);
+		timerStats = setTimeout("animStatistics(0)", 4000);
 		
 		// set timer on
 		isTimerStatsOn = true;
@@ -127,7 +127,7 @@ var animStatistics = function(show){
 		    height: '120px',
 		    opacity: 0.65,
 		    
-		}, 500, function() {
+		}, 700, function() {
 		    // animation complete.
 		}); 
 		
@@ -137,7 +137,7 @@ var animStatistics = function(show){
 		$('#statistics .content').animate({
 			height: '0px',
 			opacity: 0,
-		}, 500, function() {
+		}, 700, function() {
 		    // animation complete.
 			
 			// hide content
