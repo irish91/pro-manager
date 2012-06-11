@@ -53,6 +53,7 @@ class RegistrationController extends BaseController
 	
 		$process = $formHandler->process($confirmationEnabled);
 		if ($process) {
+			
 			$user = $form->getData();
 			
 			if($this->container->get('request')->isXmlHttpRequest()){
@@ -65,11 +66,14 @@ class RegistrationController extends BaseController
 				return new Response(json_encode($data)); 
 				
 			} else {
-				$url = $this->container->get('router')->generate('fos_user_registration_check_email');
-				return new RedirectResponse($url);
+				
+				return new RedirectResponse(
+						$this->container->get('router')->generate('fos_user_registration_check_email')
+				);
 			}
 			
 		} else {
+			
 			if($this->container->get('request')->isXmlHttpRequest()){
 				
 				$data = array(
@@ -103,7 +107,9 @@ class RegistrationController extends BaseController
 		$user = $this->container->get('fos_user.user_manager')->findUserByConfirmationToken($token);
 	
 		if (null === $user) {
-			return new RedirectResponse($this->container->get('router')->generate('fos_user_security_login'));
+			return new RedirectResponse(
+					$this->container->get('router')->generate('fos_user_security_login')
+			);
 		}
 	
 		$user->setConfirmationToken(null);
@@ -113,7 +119,9 @@ class RegistrationController extends BaseController
 		$this->container->get('fos_user.user_manager')->updateUser($user);
 		$this->authenticateUser($user);
 	
-		return new RedirectResponse($this->container->get('router')->generate('registration_create_team'));
+		return new RedirectResponse(
+				$this->container->get('router')->generate('registration_create_team')
+		);
 	}
 	
 	/**
@@ -138,7 +146,9 @@ class RegistrationController extends BaseController
 		
 		// redirect user to "sign contract" page if the team has already been created
 		if (is_object($user->getTeam()) && $user->getTeam() != null) {
-			return new RedirectResponse($this->container->get('router')->generate('registration_sign_contract'));
+			return new RedirectResponse(
+					$this->container->get('router')->generate('registration_sign_contract')
+			);
 		}
 		
 		$team = new Team();
@@ -149,6 +159,7 @@ class RegistrationController extends BaseController
 			$form->bindRequest($this->container->get('request'));
 			
 			if ($form->isValid()) {
+				
 				$em = $this->container->get('doctrine')->getEntityManager();
 				
 				$team->setUser($user);
@@ -156,8 +167,36 @@ class RegistrationController extends BaseController
 				$em->persist($team);
 				$em->flush();
 				
-				$url = $this->container->get('router')->generate('registration_sign_contract');
-				return new RedirectResponse($url);
+				if($this->container->get('request')->isXmlHttpRequest()){
+					
+					$data = array(
+						'success' => true,
+					);
+					
+					return new Response(json_encode($data));
+					
+				} else {
+
+					return new RedirectResponse(
+								$this->container->get('router')->generate('registration_sign_contract')
+					);
+				}
+				
+			} else {
+				
+				if($this->container->get('request')->isXmlHttpRequest()){
+				
+				$data = array(
+					'success' => false,
+					'errorsView' => $this->container->get('templating')	
+						->render('PmfUserBundle:Registration:ajax-form-errors.html.twig', array(
+							'form' => $form->createView(),
+						)),	
+				);
+				
+				return new Response(json_encode($data));
+				
+				}
 			}
 		}
 		
@@ -226,7 +265,9 @@ class RegistrationController extends BaseController
 				$em->flush();
 				
 				// !!TEMPORARY!! MUST REDIRECT TO GAME
-				return new RedirectResponse($this->container->get('router')->generate('homepage'));
+				return new RedirectResponse(
+						$this->container->get('router')->generate('homepage')
+				);
 			}
 		}
 		
@@ -237,5 +278,3 @@ class RegistrationController extends BaseController
 	}
 	
 }
-
-
