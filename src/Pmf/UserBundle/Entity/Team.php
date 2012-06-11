@@ -5,10 +5,15 @@ namespace Pmf\UserBundle\Entity;
 
 use FOS\UserBundle\Entity\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Pmf\UserBundle\Entity\TeamRepository")
  * @ORM\Table(name="teams")
+ * 
+ * @UniqueEntity(fields="name")
  */
 class Team
 {
