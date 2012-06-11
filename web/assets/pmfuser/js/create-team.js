@@ -9,7 +9,7 @@ $(document).ready(function(){
 	
 	// ajax call for registration
 	
-	//@TODO: SEE ISSUE #2 FOR MORE INFORMATION 
+	//@TODO: SEE ISSUE #3 and #4 FOR MORE INFORMATION 
 	/* $('form#create-team').ajaxForm({ 
         dataType:  	'json', 
         success:   	processJson,
