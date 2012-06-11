@@ -21,12 +21,8 @@ $(document).ready(function(){
 function processJson(data) {
     if(data.success == true){
     	
-    	alert('test');
-    	
     	 window.location = Routing.generate('registration_sign_contract');
-    	
-    	alert('test2');
-    	
+    	   	
     } else{ 
     	
     	$('#box-error .content').html(data.errorsView);
