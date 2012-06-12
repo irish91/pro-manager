@@ -27,6 +27,7 @@ class AppKernel extends Kernel
         	new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
         
             new Pmf\UserBundle\PmfUserBundle(),
+            new Pmf\GameInterfaceBundle\PmfGameInterfaceBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
