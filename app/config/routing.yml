@@ -1,6 +1,6 @@
 PmfGameInterfaceBundle:
     resource: "@PmfGameInterfaceBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /game
 
 PmfUserBundle:
     resource: "@PmfUserBundle/Resources/config/routing.yml"
