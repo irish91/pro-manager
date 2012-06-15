@@ -43,8 +43,7 @@ class RegistrationController extends BaseController
 		// redirect user to the game if already connected
 		$user = $this->container->get('security.context')->getToken()->getUser();
 		if (is_object($user)) {
-			// !!TEMPORARY!! MUST REDIRECT TO GAME
-			return new RedirectResponse($this->container->get('router')->generate('homepage'));
+			return new RedirectResponse($this->container->get('router')->generate('game_desk'));
 		}
 		
 		$form = $this->container->get('fos_user.registration.form');
@@ -227,8 +226,7 @@ class RegistrationController extends BaseController
 		// redirect user to the game if already connected
 		$user = $this->container->get('security.context')->getToken()->getUser();
 		if (is_object($user) && $user->hasRole('ROLE_ACTIVE_USER')) {
-			// !!TEMPORARY!! MUST REDIRECT TO GAME
-			return new RedirectResponse($this->container->get('router')->generate('homepage'));
+			return new RedirectResponse($this->container->get('router')->generate('game_desk'));
 		}
 		
 		$form = $this->container->get('form.factory')->createBuilder('form')
@@ -264,9 +262,8 @@ class RegistrationController extends BaseController
 				$em->persist($user);
 				$em->flush();
 				
-				// !!TEMPORARY!! MUST REDIRECT TO GAME
 				return new RedirectResponse(
-						$this->container->get('router')->generate('homepage')
+					$this->container->get('router')->generate('game_desk')
 				);
 			}
 		}
