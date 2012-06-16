@@ -1,6 +1,6 @@
 <?php
 
-namespace Pmf\UserBundle\Entity;
+namespace Pmf\GameInterfaceBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
 

@@ -1,16 +1,15 @@
 <?php
-// src/Pmf/UserBundle/Entity/Team.php
+// src/Pmf/GameInterfaceBundle/Entity/Team.php
 
-namespace Pmf\UserBundle\Entity;
+namespace Pmf\GameInterfaceBundle\Entity;
 
-use FOS\UserBundle\Entity\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity
- * @ORM\Entity(repositoryClass="Pmf\UserBundle\Entity\TeamRepository")
+ * @ORM\Entity(repositoryClass="Pmf\GameInterfaceBundle\Entity\TeamRepository")
  * @ORM\Table(name="teams")
  * 
  * @UniqueEntity(fields="name")

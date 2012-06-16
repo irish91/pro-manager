@@ -66,7 +66,7 @@ class User extends BaseUser
     protected $facebookID;
     
     /**
-     * @ORM\OneToOne(targetEntity="Pmf\UserBundle\Entity\Team", mappedBy="user", cascade={"all"});
+     * @ORM\OneToOne(targetEntity="Pmf\GameInterfaceBundle\Entity\Team", mappedBy="user", cascade={"all"});
      */
     protected $team;
     
