@@ -1,3 +1,10 @@
 html{
 	background-image:url(../images/background.png);
 }
+
+#left-menu{
+	position:relative;
+	width:400px;
+	min-height:300px;
+	border:1px solid yellow;
+}

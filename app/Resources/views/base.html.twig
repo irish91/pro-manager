@@ -14,11 +14,19 @@
     <body>
     {% block body %}
     	
-    	
     	{% block global_container %}
     	<div id="global-container">
     	
     	{% include 'PmfStaticBundle:Common/Block:common-body.html.twig' %}
+    	
+    	{% block leftmenu %}
+    	<div id="left-menu">
+    		
+    	
+    	</div>
+    	
+    	
+    	{% endblock %}
     	
 		    	<div id="content">
 		    	{% block content %}
