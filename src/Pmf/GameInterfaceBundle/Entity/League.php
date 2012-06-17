@@ -9,7 +9,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity
- * @ORM\Entity(repositoryClass="Pmf\GameInterfaceBundle\Entity\LeagueRepository")
+ * @ORM\Entity(repositoryClass="Pmf\GameInterfaceBundle\Entity\Repository\LeagueRepository")
  * @ORM\Table(name="leagues")
  * 
  * @UniqueEntity(fields="name")

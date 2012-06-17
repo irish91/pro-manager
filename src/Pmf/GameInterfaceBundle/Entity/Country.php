@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Entity(repositoryClass="Pmf\GameInterfaceBundle\Entity\ContinentRepository")
+ * @ORM\Entity(repositoryClass="Pmf\GameInterfaceBundle\Entity\Repository\ContinentRepository")
  * @ORM\Table(name="countries")
  * 
  */
