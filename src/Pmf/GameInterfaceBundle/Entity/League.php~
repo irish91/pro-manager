@@ -12,8 +12,6 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @ORM\Entity(repositoryClass="Pmf\GameInterfaceBundle\Entity\Repository\LeagueRepository")
  * @ORM\Table(name="leagues")
  * 
- * @UniqueEntity(fields="name")
- * @UniqueEntity(fields="federation")
  */
 class League
 {
@@ -25,12 +23,12 @@ class League
     protected $id;
     
     /**
-     * @ORM\Column(type="string", length="255", unique=true)
+     * @ORM\ManyToOne(targetEntity="Pmf\GameInterfaceBundle\Entity\LeagueType", inversedBy="leagues")
      */
-    protected $name;
+    protected $type;
     
     /**
-     * @ORM\Column(type="integer", unique=true)
+     * @ORM\Column(type="integer")
      */
     protected $federation;
     
@@ -38,7 +36,6 @@ class League
      * @ORM\OneToMany(targetEntity="Pmf\GameInterfaceBundle\Entity\Team", mappedBy="league")
      */
     protected $teams;
-
 
     public function __construct()
     {
@@ -53,26 +50,6 @@ class League
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set name
-     *
-     * @param string $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    /**
-     * Get name
-     *
-     * @return string 
-     */
-    public function getName()
-    {
-        return $this->name;
     }
 
     /**
@@ -93,6 +70,26 @@ class League
     public function getFederation()
     {
         return $this->federation;
+    }
+
+    /**
+     * Set type
+     *
+     * @param Pmf\GameInterfaceBundle\Entity\LeagueType $type
+     */
+    public function setType(\Pmf\GameInterfaceBundle\Entity\LeagueType $type)
+    {
+        $this->type = $type;
+    }
+
+    /**
+     * Get type
+     *
+     * @return Pmf\GameInterfaceBundle\Entity\LeagueType 
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 
     /**

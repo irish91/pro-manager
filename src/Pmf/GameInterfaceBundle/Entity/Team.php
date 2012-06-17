@@ -43,6 +43,11 @@ class Team
      */
     protected $style;
     
+ 	/**
+ 	 * @ORM\ManyToOne(targetEntity="Pmf\GameInterfaceBundle\Entity\League", inversedBy="teams")
+ 	 */
+    protected $league;
+    
     /**
      * @ORM\OneToOne(targetEntity="Pmf\UserBundle\Entity\User", inversedBy="team");
      */
@@ -157,5 +162,25 @@ class Team
     public function getUser()
     {
         return $this->user;
+    }
+
+    /**
+     * Set league
+     *
+     * @param Pmf\GameInterfaceBundle\Entity\League $league
+     */
+    public function setLeague(\Pmf\GameInterfaceBundle\Entity\League $league)
+    {
+        $this->league = $league;
+    }
+
+    /**
+     * Get league
+     *
+     * @return Pmf\GameInterfaceBundle\Entity\League 
+     */
+    public function getLeague()
+    {
+        return $this->league;
     }
 }
