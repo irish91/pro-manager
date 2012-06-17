@@ -32,6 +32,7 @@ class LeagueType
      * @ORM\Column(type="string", length="255", unique=true)
      */
     protected $name;
+    
     public function __construct()
     {
         $this->leagues = new \Doctrine\Common\Collections\ArrayCollection();
