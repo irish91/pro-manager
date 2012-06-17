@@ -7,11 +7,11 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Entity(repositoryClass="Pmf\GameInterfaceBundle\Entity\Repository\ContinentRepository")
- * @ORM\Table(name="countries")
+ * @ORM\Entity(repositoryClass="Pmf\GameInterfaceBundle\Entity\Repository\PlayableCountryRepository")
+ * @ORM\Table(name="playable_countries")
  * 
  */
-class Country
+class PlayableCountry
 {
     /**
      * @ORM\Id
@@ -31,10 +31,9 @@ class Country
     protected $abv;
     
     /**
-     * @ORM\ManyToOne(targetEntity="Pmf\GameInterfaceBundle\Entity\Continent", inversedBy="countries")
+     * @ORM\ManyToOne(targetEntity="Pmf\GameInterfaceBundle\Entity\Continent", inversedBy="pCountries")
      */
     protected $continent;
-
 
     /**
      * Get id

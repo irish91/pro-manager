@@ -1,0 +1,37 @@
+<?php
+// src/Pmf/GameInterfaceBundle/Entity/Country.php
+
+namespace Pmf\GameInterfaceBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Pmf\GameInterfaceBundle\Entity\Repository\PlayableCountryRepository")
+ * @ORM\Table(name="playable_countries")
+ * 
+ */
+class PlayableCountry
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+    
+    /**
+     * @ORM\Column(type="string", length="255")
+     */
+    protected $name;
+    
+    /**
+     * @ORM\Column(type="string", length="10")
+     */
+    protected $abv;
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="Pmf\GameInterfaceBundle\Entity\Continent", inversedBy="pCountries")
+     */
+    protected $continent;
+}

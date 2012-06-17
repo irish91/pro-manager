@@ -26,13 +26,13 @@ class Continent
     protected $name;
     
     /**
-     * @ORM\OneToMany(targetEntity="Pmf\GameInterfaceBundle\Entity\Country", mappedBy="continent")
+     * @ORM\OneToMany(targetEntity="Pmf\GameInterfaceBundle\Entity\PlayableCountry", mappedBy="continent")
      */
-    protected $countries;
+    protected $pCountries;
 
     public function __construct()
     {
-        $this->countries = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->pCountries = new \Doctrine\Common\Collections\ArrayCollection();
     }
     
     /**
@@ -66,22 +66,22 @@ class Continent
     }
 
     /**
-     * Add countries
+     * Add pCountries
      *
-     * @param Pmf\GameInterfaceBundle\Entity\Country $countries
+     * @param Pmf\GameInterfaceBundle\Entity\PlayableCountry $pCountries
      */
-    public function addCountry(\Pmf\GameInterfaceBundle\Entity\Country $countries)
+    public function addPlayableCountry(\Pmf\GameInterfaceBundle\Entity\PlayableCountry $pCountries)
     {
-        $this->countries[] = $countries;
+        $this->pCountries[] = $pCountries;
     }
 
     /**
-     * Get countries
+     * Get pCountries
      *
      * @return Doctrine\Common\Collections\Collection 
      */
-    public function getCountries()
+    public function getPCountries()
     {
-        return $this->countries;
+        return $this->pCountries;
     }
 }
