@@ -15,7 +15,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use FOS\UserBundle\Controller\RegistrationController as BaseController;
 
 use Pmf\UserBundle\Form\Type\CreateTeamFormType;
-use Pmf\UserBundle\Entity\Team;
+use Pmf\GameInterfaceBundle\Entity\Team;
 
 /**
  *

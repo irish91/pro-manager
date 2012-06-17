@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Entity(repositoryClass="Pmf\GameInterfaceBundle\Entity\ContinentRepository")
+ * @ORM\Entity(repositoryClass="Pmf\GameInterfaceBundle\Entity\Repository\ContinentRepository")
  * @ORM\Table(name="countries")
  * 
  */
@@ -21,12 +21,12 @@ class Country
     protected $id;
     
     /**
-     * @ORM\Column(type="string", length="255", unique=true)
+     * @ORM\Column(type="string", length="255")
      */
     protected $name;
     
     /**
-     * @ORM\Column(type="string", length="10", unique=true)
+     * @ORM\Column(type="string", length="10")
      */
     protected $abv;
     

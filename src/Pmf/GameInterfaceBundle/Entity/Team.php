@@ -1,16 +1,15 @@
 <?php
-// src/Pmf/UserBundle/Entity/Team.php
+// src/Pmf/GameInterfaceBundle/Entity/Team.php
 
-namespace Pmf\UserBundle\Entity;
+namespace Pmf\GameInterfaceBundle\Entity;
 
-use FOS\UserBundle\Entity\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity
- * @ORM\Entity(repositoryClass="Pmf\UserBundle\Entity\TeamRepository")
+ * @ORM\Entity(repositoryClass="Pmf\GameInterfaceBundle\Entity\Repository\TeamRepository")
  * @ORM\Table(name="teams")
  * 
  * @UniqueEntity(fields="name")
@@ -43,6 +42,11 @@ class Team
      * @ORM\Column(type="string", length="255")
      */
     protected $style;
+    
+ 	/**
+ 	 * @ORM\ManyToOne(targetEntity="Pmf\GameInterfaceBundle\Entity\League", inversedBy="teams")
+ 	 */
+    protected $league;
     
     /**
      * @ORM\OneToOne(targetEntity="Pmf\UserBundle\Entity\User", inversedBy="team");
@@ -158,5 +162,25 @@ class Team
     public function getUser()
     {
         return $this->user;
+    }
+
+    /**
+     * Set league
+     *
+     * @param Pmf\GameInterfaceBundle\Entity\League $league
+     */
+    public function setLeague(\Pmf\GameInterfaceBundle\Entity\League $league)
+    {
+        $this->league = $league;
+    }
+
+    /**
+     * Get league
+     *
+     * @return Pmf\GameInterfaceBundle\Entity\League 
+     */
+    public function getLeague()
+    {
+        return $this->league;
     }
 }
