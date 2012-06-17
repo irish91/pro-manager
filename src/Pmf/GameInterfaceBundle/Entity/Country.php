@@ -7,11 +7,11 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Entity(repositoryClass="Pmf\GameInterfaceBundle\Entity\Repository\PlayableCountryRepository")
- * @ORM\Table(name="playable_countries")
+ * @ORM\Entity(repositoryClass="Pmf\GameInterfaceBundle\Entity\Repository\CountryRepository")
+ * @ORM\Table(name="countries")
  * 
  */
-class PlayableCountry
+class Country
 {
     /**
      * @ORM\Id
@@ -31,9 +31,10 @@ class PlayableCountry
     protected $abv;
     
     /**
-     * @ORM\ManyToOne(targetEntity="Pmf\GameInterfaceBundle\Entity\Continent", inversedBy="pCountries")
+     * @ORM\OneToOne(targetEntity="Pmf\GameInterfaceBundle\Entity\Country", mappedBy="country")
      */
-    protected $continent;
+    protected $nTeam;
+
 
     /**
      * Get id
@@ -86,22 +87,22 @@ class PlayableCountry
     }
 
     /**
-     * Set continent
+     * Set nTeam
      *
-     * @param Pmf\GameInterfaceBundle\Entity\Continent $continent
+     * @param Pmf\GameInterfaceBundle\Entity\Country $nTeam
      */
-    public function setContinent(\Pmf\GameInterfaceBundle\Entity\Continent $continent)
+    public function setNTeam(\Pmf\GameInterfaceBundle\Entity\Country $nTeam)
     {
-        $this->continent = $continent;
+        $this->nTeam = $nTeam;
     }
 
     /**
-     * Get continent
+     * Get nTeam
      *
-     * @return Pmf\GameInterfaceBundle\Entity\Continent 
+     * @return Pmf\GameInterfaceBundle\Entity\Country 
      */
-    public function getContinent()
+    public function getNTeam()
     {
-        return $this->continent;
+        return $this->nTeam;
     }
 }

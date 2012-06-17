@@ -30,4 +30,58 @@ class Continent
      */
     protected $pCountries;
 
+    public function __construct()
+    {
+        $this->pCountries = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Add pCountries
+     *
+     * @param Pmf\GameInterfaceBundle\Entity\PlayableCountry $pCountries
+     */
+    public function addPlayableCountry(\Pmf\GameInterfaceBundle\Entity\PlayableCountry $pCountries)
+    {
+        $this->pCountries[] = $pCountries;
+    }
+
+    /**
+     * Get pCountries
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getPCountries()
+    {
+        return $this->pCountries;
+    }
 }
