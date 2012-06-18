@@ -26,7 +26,7 @@ class Country
     protected $name;
     
     /**
-     * @ORM\Column(type="string", length="10")
+     * @ORM\Column(type="string", length="10", nullable=true)
      */
     protected $abv;
     
@@ -34,6 +34,11 @@ class Country
      * @ORM\OneToOne(targetEntity="Pmf\GameInterfaceBundle\Entity\Country", mappedBy="country")
      */
     protected $nTeam;
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="Pmf\GameInterfaceBundle\Entity\Continent", inversedBy="countries")
+     */
+    protected $continent;
 
 
     /**
@@ -104,5 +109,25 @@ class Country
     public function getNTeam()
     {
         return $this->nTeam;
+    }
+
+    /**
+     * Set continent
+     *
+     * @param Pmf\GameInterfaceBundle\Entity\Continent $continent
+     */
+    public function setContinent(\Pmf\GameInterfaceBundle\Entity\Continent $continent)
+    {
+        $this->continent = $continent;
+    }
+
+    /**
+     * Get continent
+     *
+     * @return Pmf\GameInterfaceBundle\Entity\Continent 
+     */
+    public function getContinent()
+    {
+        return $this->continent;
     }
 }

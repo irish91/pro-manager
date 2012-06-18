@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="UTF-8" />
+    </head>
+    <body>
+    
+    
+    {% if response %}
+    	
+    	<p>Countries generated</p>
+    	
+    {% else %}
+    
+		<form method="post" action="{{ path('scripts_db_generation_countries') }}">
+		
+			<input type="submit" value="Generate" />
+		
+		</form>
+	
+	{% endif %}
+
+	</body>
+
+</html>

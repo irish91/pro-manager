@@ -25,4 +25,34 @@ class NationalTeam
      */
     protected $country;
 
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set country
+     *
+     * @param Pmf\GameInterfaceBundle\Entity\Country $country
+     */
+    public function setCountry(\Pmf\GameInterfaceBundle\Entity\Country $country)
+    {
+        $this->country = $country;
+    }
+
+    /**
+     * Get country
+     *
+     * @return Pmf\GameInterfaceBundle\Entity\Country 
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
 }
