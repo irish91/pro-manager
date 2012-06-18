@@ -1,3 +1,7 @@
+PmfScriptsBundle:
+    resource: "@PmfScriptsBundle/Resources/config/routing.yml"
+    prefix:   /scripts
+
 PmfGameInterfaceBundle:
     resource: "@PmfGameInterfaceBundle/Resources/config/routing.yml"
     prefix:   /game

@@ -1,0 +1,3 @@
+scripts_db_generation_countries:
+    pattern:  /countries-from-flags-files
+    defaults: { _controller: PmfScriptsBundle:DBGeneration:countries }

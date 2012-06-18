@@ -28,6 +28,7 @@ class AppKernel extends Kernel
         
             new Pmf\UserBundle\PmfUserBundle(),
             new Pmf\GameInterfaceBundle\PmfGameInterfaceBundle(),
+            new Pmf\ScriptsBundle\PmfScriptsBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
