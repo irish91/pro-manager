@@ -47,7 +47,7 @@ class CreateTeamFormType extends AbstractType
     public function getDefaultOptions(array $options)
     {
     	return array(
-    			'data_class' => 'Pmf\UserBundle\Entity\Team',
+    			'data_class' => 'Pmf\GameInterfaceBundle\Entity\Team',
     	);
     }
     
